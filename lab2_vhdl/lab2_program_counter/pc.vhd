@@ -1,0 +1,30 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.std_logic_unsigned.ALL;
+
+ENTITY pc IS
+PORT (
+	clr	: IN STD_LOGIC; -- async. CLR
+	clk	: IN STD_LOGIC; -- CLK
+	ld		: IN STD_LOGIC; -- load/EN (q is loaded w/ d at CLK rising edge)
+	inc	: IN STD_LOGIC; -- increment PC by 4
+	d		: IN STD_LOGIC_VECTOR(31 DOWNTO 0); 	-- input
+	q		: INOUT STD_LOGIC_VECTOR(31 DOWNTO 0)); -- output
+END pc;
+
+ARCHITECTURE Behaviour OF pc IS
+BEGIN
+	PROCESS (clk, clr)
+	BEGIN
+		IF clr = '1' THEN	-- set Q to RST state on async CLR
+			q <= (others => '0') ; 
+		ELSIF clk'EVENT AND clk = '1' THEN -- update Q on CLK rising edge
+			IF inc = '1' THEN -- on INC signal, increment Q by 4
+				q <= q+4 ;
+			ELSIF ld = '1' THEN -- on LOAD signal, load D into Q
+				q <= d ; 
+			END IF;				-- if no INC or LOAD, do nothing on rising edge
+		END IF;
+	END PROCESS;
+END Behaviour;
