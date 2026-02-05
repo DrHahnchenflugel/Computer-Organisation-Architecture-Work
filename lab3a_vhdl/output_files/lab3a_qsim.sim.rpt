@@ -1,0 +1,1208 @@
+Simulator report for lab3a_qsim
+Thu Jan 29 16:28:04 2026
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 777 nodes    ;
+; Simulation Coverage         ;      49.29 % ;
+; Total Number of Transitions ; 2075         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                                                   ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                                                ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                                      ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                                       ;               ;
+; Vector input source                                                                        ; Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab3a_vhdl/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                                        ; On            ;
+; Check outputs                                                                              ; Off                                                                                                       ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                                        ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                                        ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                                        ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                                        ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                                       ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                                       ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                                       ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                                       ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                                       ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                                       ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                                        ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                                                ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                                       ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                                       ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                                      ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                                                                                 ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                                                                                 ; Transport     ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      49.29 % ;
+; Total nodes checked                                 ; 777          ;
+; Total output ports checked                          ; 777          ;
+; Total output ports with complete 1/0-value coverage ; 383          ;
+; Total output ports with no 1/0-value coverage       ; 175          ;
+; Total output ports with no 1-value coverage         ; 394          ;
+; Total output ports with no 0-value coverage         ; 175          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                  ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |alu|result_var~0   ; |alu|result_var~0   ; out0             ;
+; |alu|result_var~33  ; |alu|result_var~33  ; out0             ;
+; |alu|result_var~34  ; |alu|result_var~34  ; out0             ;
+; |alu|result_var~36  ; |alu|result_var~36  ; out0             ;
+; |alu|result_var~37  ; |alu|result_var~37  ; out0             ;
+; |alu|result_var~38  ; |alu|result_var~38  ; out0             ;
+; |alu|result_var~39  ; |alu|result_var~39  ; out0             ;
+; |alu|result_var~40  ; |alu|result_var~40  ; out0             ;
+; |alu|result_var~41  ; |alu|result_var~41  ; out0             ;
+; |alu|result_var~42  ; |alu|result_var~42  ; out0             ;
+; |alu|result_var~43  ; |alu|result_var~43  ; out0             ;
+; |alu|result_var~44  ; |alu|result_var~44  ; out0             ;
+; |alu|result_var~45  ; |alu|result_var~45  ; out0             ;
+; |alu|result_var~46  ; |alu|result_var~46  ; out0             ;
+; |alu|result_var~47  ; |alu|result_var~47  ; out0             ;
+; |alu|result_var~48  ; |alu|result_var~48  ; out0             ;
+; |alu|result_var~49  ; |alu|result_var~49  ; out0             ;
+; |alu|result_var~50  ; |alu|result_var~50  ; out0             ;
+; |alu|result_var~51  ; |alu|result_var~51  ; out0             ;
+; |alu|result_var~52  ; |alu|result_var~52  ; out0             ;
+; |alu|result_var~53  ; |alu|result_var~53  ; out0             ;
+; |alu|result_var~54  ; |alu|result_var~54  ; out0             ;
+; |alu|result_var~55  ; |alu|result_var~55  ; out0             ;
+; |alu|result_var~56  ; |alu|result_var~56  ; out0             ;
+; |alu|result_var~57  ; |alu|result_var~57  ; out0             ;
+; |alu|result_var~58  ; |alu|result_var~58  ; out0             ;
+; |alu|result_var~59  ; |alu|result_var~59  ; out0             ;
+; |alu|result_var~60  ; |alu|result_var~60  ; out0             ;
+; |alu|result_var~61  ; |alu|result_var~61  ; out0             ;
+; |alu|result_var~62  ; |alu|result_var~62  ; out0             ;
+; |alu|result_var~63  ; |alu|result_var~63  ; out0             ;
+; |alu|result_var~64  ; |alu|result_var~64  ; out0             ;
+; |alu|result_var~65  ; |alu|result_var~65  ; out0             ;
+; |alu|result_var~66  ; |alu|result_var~66  ; out0             ;
+; |alu|result_var~67  ; |alu|result_var~67  ; out0             ;
+; |alu|result_var~68  ; |alu|result_var~68  ; out0             ;
+; |alu|result_var~69  ; |alu|result_var~69  ; out0             ;
+; |alu|result_var~70  ; |alu|result_var~70  ; out0             ;
+; |alu|result_var~71  ; |alu|result_var~71  ; out0             ;
+; |alu|result_var~72  ; |alu|result_var~72  ; out0             ;
+; |alu|result_var~73  ; |alu|result_var~73  ; out0             ;
+; |alu|carry~96       ; |alu|carry~96       ; out0             ;
+; |alu|carry~98       ; |alu|carry~98       ; out0             ;
+; |alu|carry~100      ; |alu|carry~100      ; out0             ;
+; |alu|result_var~74  ; |alu|result_var~74  ; out0             ;
+; |alu|result_var~75  ; |alu|result_var~75  ; out0             ;
+; |alu|carry~101      ; |alu|carry~101      ; out0             ;
+; |alu|carry~102      ; |alu|carry~102      ; out0             ;
+; |alu|carry~103      ; |alu|carry~103      ; out0             ;
+; |alu|carry~104      ; |alu|carry~104      ; out0             ;
+; |alu|carry~105      ; |alu|carry~105      ; out0             ;
+; |alu|result_var~76  ; |alu|result_var~76  ; out0             ;
+; |alu|result_var~77  ; |alu|result_var~77  ; out0             ;
+; |alu|carry~106      ; |alu|carry~106      ; out0             ;
+; |alu|carry~107      ; |alu|carry~107      ; out0             ;
+; |alu|carry~108      ; |alu|carry~108      ; out0             ;
+; |alu|carry~109      ; |alu|carry~109      ; out0             ;
+; |alu|carry~110      ; |alu|carry~110      ; out0             ;
+; |alu|result_var~78  ; |alu|result_var~78  ; out0             ;
+; |alu|result_var~79  ; |alu|result_var~79  ; out0             ;
+; |alu|carry~111      ; |alu|carry~111      ; out0             ;
+; |alu|carry~112      ; |alu|carry~112      ; out0             ;
+; |alu|carry~113      ; |alu|carry~113      ; out0             ;
+; |alu|carry~114      ; |alu|carry~114      ; out0             ;
+; |alu|carry~115      ; |alu|carry~115      ; out0             ;
+; |alu|result_var~80  ; |alu|result_var~80  ; out0             ;
+; |alu|result_var~81  ; |alu|result_var~81  ; out0             ;
+; |alu|carry~117      ; |alu|carry~117      ; out0             ;
+; |alu|carry~118      ; |alu|carry~118      ; out0             ;
+; |alu|carry~120      ; |alu|carry~120      ; out0             ;
+; |alu|result_var~82  ; |alu|result_var~82  ; out0             ;
+; |alu|result_var~83  ; |alu|result_var~83  ; out0             ;
+; |alu|carry~122      ; |alu|carry~122      ; out0             ;
+; |alu|carry~123      ; |alu|carry~123      ; out0             ;
+; |alu|carry~125      ; |alu|carry~125      ; out0             ;
+; |alu|result_var~84  ; |alu|result_var~84  ; out0             ;
+; |alu|result_var~85  ; |alu|result_var~85  ; out0             ;
+; |alu|carry~127      ; |alu|carry~127      ; out0             ;
+; |alu|carry~128      ; |alu|carry~128      ; out0             ;
+; |alu|carry~130      ; |alu|carry~130      ; out0             ;
+; |alu|result_var~86  ; |alu|result_var~86  ; out0             ;
+; |alu|result_var~87  ; |alu|result_var~87  ; out0             ;
+; |alu|carry~132      ; |alu|carry~132      ; out0             ;
+; |alu|carry~133      ; |alu|carry~133      ; out0             ;
+; |alu|carry~135      ; |alu|carry~135      ; out0             ;
+; |alu|result_var~88  ; |alu|result_var~88  ; out0             ;
+; |alu|result_var~89  ; |alu|result_var~89  ; out0             ;
+; |alu|carry~136      ; |alu|carry~136      ; out0             ;
+; |alu|carry~137      ; |alu|carry~137      ; out0             ;
+; |alu|carry~138      ; |alu|carry~138      ; out0             ;
+; |alu|carry~139      ; |alu|carry~139      ; out0             ;
+; |alu|carry~140      ; |alu|carry~140      ; out0             ;
+; |alu|result_var~90  ; |alu|result_var~90  ; out0             ;
+; |alu|result_var~91  ; |alu|result_var~91  ; out0             ;
+; |alu|carry~141      ; |alu|carry~141      ; out0             ;
+; |alu|carry~142      ; |alu|carry~142      ; out0             ;
+; |alu|carry~143      ; |alu|carry~143      ; out0             ;
+; |alu|carry~144      ; |alu|carry~144      ; out0             ;
+; |alu|carry~145      ; |alu|carry~145      ; out0             ;
+; |alu|result_var~92  ; |alu|result_var~92  ; out0             ;
+; |alu|result_var~93  ; |alu|result_var~93  ; out0             ;
+; |alu|carry~146      ; |alu|carry~146      ; out0             ;
+; |alu|carry~147      ; |alu|carry~147      ; out0             ;
+; |alu|carry~148      ; |alu|carry~148      ; out0             ;
+; |alu|carry~149      ; |alu|carry~149      ; out0             ;
+; |alu|carry~150      ; |alu|carry~150      ; out0             ;
+; |alu|result_var~94  ; |alu|result_var~94  ; out0             ;
+; |alu|result_var~95  ; |alu|result_var~95  ; out0             ;
+; |alu|carry~151      ; |alu|carry~151      ; out0             ;
+; |alu|carry~152      ; |alu|carry~152      ; out0             ;
+; |alu|carry~153      ; |alu|carry~153      ; out0             ;
+; |alu|carry~154      ; |alu|carry~154      ; out0             ;
+; |alu|result_var~96  ; |alu|result_var~96  ; out0             ;
+; |alu|carry~155      ; |alu|carry~155      ; out0             ;
+; |alu|carry~156      ; |alu|carry~156      ; out0             ;
+; |alu|carry~157      ; |alu|carry~157      ; out0             ;
+; |alu|result_var~97  ; |alu|result_var~97  ; out0             ;
+; |alu|result_var~98  ; |alu|result_var~98  ; out0             ;
+; |alu|carry~158      ; |alu|carry~158      ; out0             ;
+; |alu|carry~159      ; |alu|carry~159      ; out0             ;
+; |alu|carry~160      ; |alu|carry~160      ; out0             ;
+; |alu|carry~162      ; |alu|carry~162      ; out0             ;
+; |alu|result_var~99  ; |alu|result_var~99  ; out0             ;
+; |alu|result_var~100 ; |alu|result_var~100 ; out0             ;
+; |alu|carry~163      ; |alu|carry~163      ; out0             ;
+; |alu|carry~164      ; |alu|carry~164      ; out0             ;
+; |alu|carry~165      ; |alu|carry~165      ; out0             ;
+; |alu|carry~167      ; |alu|carry~167      ; out0             ;
+; |alu|result_var~101 ; |alu|result_var~101 ; out0             ;
+; |alu|result_var~102 ; |alu|result_var~102 ; out0             ;
+; |alu|carry~168      ; |alu|carry~168      ; out0             ;
+; |alu|carry~169      ; |alu|carry~169      ; out0             ;
+; |alu|carry~170      ; |alu|carry~170      ; out0             ;
+; |alu|carry~172      ; |alu|carry~172      ; out0             ;
+; |alu|result_var~103 ; |alu|result_var~103 ; out0             ;
+; |alu|result_var~104 ; |alu|result_var~104 ; out0             ;
+; |alu|carry~173      ; |alu|carry~173      ; out0             ;
+; |alu|carry~174      ; |alu|carry~174      ; out0             ;
+; |alu|carry~175      ; |alu|carry~175      ; out0             ;
+; |alu|carry~177      ; |alu|carry~177      ; out0             ;
+; |alu|result_var~105 ; |alu|result_var~105 ; out0             ;
+; |alu|result_var~106 ; |alu|result_var~106 ; out0             ;
+; |alu|carry~178      ; |alu|carry~178      ; out0             ;
+; |alu|carry~179      ; |alu|carry~179      ; out0             ;
+; |alu|carry~180      ; |alu|carry~180      ; out0             ;
+; |alu|carry~182      ; |alu|carry~182      ; out0             ;
+; |alu|result_var~107 ; |alu|result_var~107 ; out0             ;
+; |alu|result_var~108 ; |alu|result_var~108 ; out0             ;
+; |alu|carry~183      ; |alu|carry~183      ; out0             ;
+; |alu|carry~184      ; |alu|carry~184      ; out0             ;
+; |alu|carry~185      ; |alu|carry~185      ; out0             ;
+; |alu|carry~187      ; |alu|carry~187      ; out0             ;
+; |alu|result_var~109 ; |alu|result_var~109 ; out0             ;
+; |alu|result_var~110 ; |alu|result_var~110 ; out0             ;
+; |alu|carry~188      ; |alu|carry~188      ; out0             ;
+; |alu|carry~189      ; |alu|carry~189      ; out0             ;
+; |alu|carry~190      ; |alu|carry~190      ; out0             ;
+; |alu|carry~192      ; |alu|carry~192      ; out0             ;
+; |alu|result_var~111 ; |alu|result_var~111 ; out0             ;
+; |alu|result_var~112 ; |alu|result_var~112 ; out0             ;
+; |alu|carry~193      ; |alu|carry~193      ; out0             ;
+; |alu|carry~194      ; |alu|carry~194      ; out0             ;
+; |alu|carry~195      ; |alu|carry~195      ; out0             ;
+; |alu|carry~197      ; |alu|carry~197      ; out0             ;
+; |alu|result_var~113 ; |alu|result_var~113 ; out0             ;
+; |alu|result_var~114 ; |alu|result_var~114 ; out0             ;
+; |alu|carry~198      ; |alu|carry~198      ; out0             ;
+; |alu|carry~199      ; |alu|carry~199      ; out0             ;
+; |alu|carry~200      ; |alu|carry~200      ; out0             ;
+; |alu|carry~202      ; |alu|carry~202      ; out0             ;
+; |alu|result_var~115 ; |alu|result_var~115 ; out0             ;
+; |alu|result_var~116 ; |alu|result_var~116 ; out0             ;
+; |alu|carry~203      ; |alu|carry~203      ; out0             ;
+; |alu|carry~204      ; |alu|carry~204      ; out0             ;
+; |alu|carry~205      ; |alu|carry~205      ; out0             ;
+; |alu|carry~207      ; |alu|carry~207      ; out0             ;
+; |alu|result_var~117 ; |alu|result_var~117 ; out0             ;
+; |alu|result_var~118 ; |alu|result_var~118 ; out0             ;
+; |alu|carry~208      ; |alu|carry~208      ; out0             ;
+; |alu|carry~209      ; |alu|carry~209      ; out0             ;
+; |alu|carry~210      ; |alu|carry~210      ; out0             ;
+; |alu|carry~212      ; |alu|carry~212      ; out0             ;
+; |alu|result_var~119 ; |alu|result_var~119 ; out0             ;
+; |alu|result_var~120 ; |alu|result_var~120 ; out0             ;
+; |alu|carry~213      ; |alu|carry~213      ; out0             ;
+; |alu|carry~214      ; |alu|carry~214      ; out0             ;
+; |alu|carry~215      ; |alu|carry~215      ; out0             ;
+; |alu|carry~217      ; |alu|carry~217      ; out0             ;
+; |alu|result_var~121 ; |alu|result_var~121 ; out0             ;
+; |alu|result_var~122 ; |alu|result_var~122 ; out0             ;
+; |alu|carry~218      ; |alu|carry~218      ; out0             ;
+; |alu|carry~219      ; |alu|carry~219      ; out0             ;
+; |alu|carry~220      ; |alu|carry~220      ; out0             ;
+; |alu|carry~222      ; |alu|carry~222      ; out0             ;
+; |alu|result_var~123 ; |alu|result_var~123 ; out0             ;
+; |alu|result_var~124 ; |alu|result_var~124 ; out0             ;
+; |alu|carry~223      ; |alu|carry~223      ; out0             ;
+; |alu|carry~224      ; |alu|carry~224      ; out0             ;
+; |alu|carry~225      ; |alu|carry~225      ; out0             ;
+; |alu|carry~227      ; |alu|carry~227      ; out0             ;
+; |alu|result_var~125 ; |alu|result_var~125 ; out0             ;
+; |alu|result_var~126 ; |alu|result_var~126 ; out0             ;
+; |alu|carry~228      ; |alu|carry~228      ; out0             ;
+; |alu|carry~229      ; |alu|carry~229      ; out0             ;
+; |alu|carry~230      ; |alu|carry~230      ; out0             ;
+; |alu|carry~232      ; |alu|carry~232      ; out0             ;
+; |alu|result_var~127 ; |alu|result_var~127 ; out0             ;
+; |alu|result_var~128 ; |alu|result_var~128 ; out0             ;
+; |alu|carry~233      ; |alu|carry~233      ; out0             ;
+; |alu|carry~234      ; |alu|carry~234      ; out0             ;
+; |alu|carry~235      ; |alu|carry~235      ; out0             ;
+; |alu|carry~237      ; |alu|carry~237      ; out0             ;
+; |alu|result_var~129 ; |alu|result_var~129 ; out0             ;
+; |alu|result_var~130 ; |alu|result_var~130 ; out0             ;
+; |alu|carry~238      ; |alu|carry~238      ; out0             ;
+; |alu|carry~239      ; |alu|carry~239      ; out0             ;
+; |alu|carry~240      ; |alu|carry~240      ; out0             ;
+; |alu|carry~241      ; |alu|carry~241      ; out0             ;
+; |alu|carry~242      ; |alu|carry~242      ; out0             ;
+; |alu|result_var~131 ; |alu|result_var~131 ; out0             ;
+; |alu|result_var~132 ; |alu|result_var~132 ; out0             ;
+; |alu|carry~243      ; |alu|carry~243      ; out0             ;
+; |alu|carry~244      ; |alu|carry~244      ; out0             ;
+; |alu|carry~245      ; |alu|carry~245      ; out0             ;
+; |alu|carry~246      ; |alu|carry~246      ; out0             ;
+; |alu|carry~247      ; |alu|carry~247      ; out0             ;
+; |alu|result_var~133 ; |alu|result_var~133 ; out0             ;
+; |alu|result_var~134 ; |alu|result_var~134 ; out0             ;
+; |alu|carry~248      ; |alu|carry~248      ; out0             ;
+; |alu|carry~249      ; |alu|carry~249      ; out0             ;
+; |alu|carry~250      ; |alu|carry~250      ; out0             ;
+; |alu|carry~251      ; |alu|carry~251      ; out0             ;
+; |alu|carry~252      ; |alu|carry~252      ; out0             ;
+; |alu|result_var~135 ; |alu|result_var~135 ; out0             ;
+; |alu|result_var~136 ; |alu|result_var~136 ; out0             ;
+; |alu|carry~253      ; |alu|carry~253      ; out0             ;
+; |alu|carry~254      ; |alu|carry~254      ; out0             ;
+; |alu|carry~255      ; |alu|carry~255      ; out0             ;
+; |alu|carry~256      ; |alu|carry~256      ; out0             ;
+; |alu|carry~257      ; |alu|carry~257      ; out0             ;
+; |alu|result_var~137 ; |alu|result_var~137 ; out0             ;
+; |alu|result_var~138 ; |alu|result_var~138 ; out0             ;
+; |alu|carry~258      ; |alu|carry~258      ; out0             ;
+; |alu|carry~259      ; |alu|carry~259      ; out0             ;
+; |alu|carry~260      ; |alu|carry~260      ; out0             ;
+; |alu|carry~261      ; |alu|carry~261      ; out0             ;
+; |alu|carry~262      ; |alu|carry~262      ; out0             ;
+; |alu|result_var~139 ; |alu|result_var~139 ; out0             ;
+; |alu|result_var~140 ; |alu|result_var~140 ; out0             ;
+; |alu|carry~263      ; |alu|carry~263      ; out0             ;
+; |alu|carry~264      ; |alu|carry~264      ; out0             ;
+; |alu|carry~265      ; |alu|carry~265      ; out0             ;
+; |alu|carry~266      ; |alu|carry~266      ; out0             ;
+; |alu|carry~267      ; |alu|carry~267      ; out0             ;
+; |alu|result_var~141 ; |alu|result_var~141 ; out0             ;
+; |alu|result_var~142 ; |alu|result_var~142 ; out0             ;
+; |alu|carry~268      ; |alu|carry~268      ; out0             ;
+; |alu|carry~269      ; |alu|carry~269      ; out0             ;
+; |alu|carry~270      ; |alu|carry~270      ; out0             ;
+; |alu|carry~271      ; |alu|carry~271      ; out0             ;
+; |alu|carry~272      ; |alu|carry~272      ; out0             ;
+; |alu|result_var~143 ; |alu|result_var~143 ; out0             ;
+; |alu|result_var~144 ; |alu|result_var~144 ; out0             ;
+; |alu|carry~273      ; |alu|carry~273      ; out0             ;
+; |alu|carry~274      ; |alu|carry~274      ; out0             ;
+; |alu|carry~275      ; |alu|carry~275      ; out0             ;
+; |alu|carry~276      ; |alu|carry~276      ; out0             ;
+; |alu|carry~277      ; |alu|carry~277      ; out0             ;
+; |alu|result_var~145 ; |alu|result_var~145 ; out0             ;
+; |alu|result_var~146 ; |alu|result_var~146 ; out0             ;
+; |alu|carry~278      ; |alu|carry~278      ; out0             ;
+; |alu|carry~279      ; |alu|carry~279      ; out0             ;
+; |alu|carry~280      ; |alu|carry~280      ; out0             ;
+; |alu|carry~281      ; |alu|carry~281      ; out0             ;
+; |alu|carry~282      ; |alu|carry~282      ; out0             ;
+; |alu|result_var~147 ; |alu|result_var~147 ; out0             ;
+; |alu|result_var~148 ; |alu|result_var~148 ; out0             ;
+; |alu|carry~283      ; |alu|carry~283      ; out0             ;
+; |alu|carry~284      ; |alu|carry~284      ; out0             ;
+; |alu|carry~285      ; |alu|carry~285      ; out0             ;
+; |alu|carry~286      ; |alu|carry~286      ; out0             ;
+; |alu|carry~287      ; |alu|carry~287      ; out0             ;
+; |alu|result_var~149 ; |alu|result_var~149 ; out0             ;
+; |alu|result_var~150 ; |alu|result_var~150 ; out0             ;
+; |alu|carry~288      ; |alu|carry~288      ; out0             ;
+; |alu|carry~289      ; |alu|carry~289      ; out0             ;
+; |alu|carry~290      ; |alu|carry~290      ; out0             ;
+; |alu|carry~291      ; |alu|carry~291      ; out0             ;
+; |alu|carry~292      ; |alu|carry~292      ; out0             ;
+; |alu|result_var~151 ; |alu|result_var~151 ; out0             ;
+; |alu|result_var~152 ; |alu|result_var~152 ; out0             ;
+; |alu|carry~293      ; |alu|carry~293      ; out0             ;
+; |alu|carry~294      ; |alu|carry~294      ; out0             ;
+; |alu|carry~295      ; |alu|carry~295      ; out0             ;
+; |alu|carry~296      ; |alu|carry~296      ; out0             ;
+; |alu|carry~297      ; |alu|carry~297      ; out0             ;
+; |alu|result_var~153 ; |alu|result_var~153 ; out0             ;
+; |alu|result_var~154 ; |alu|result_var~154 ; out0             ;
+; |alu|carry~298      ; |alu|carry~298      ; out0             ;
+; |alu|carry~299      ; |alu|carry~299      ; out0             ;
+; |alu|carry~300      ; |alu|carry~300      ; out0             ;
+; |alu|carry~301      ; |alu|carry~301      ; out0             ;
+; |alu|carry~302      ; |alu|carry~302      ; out0             ;
+; |alu|result_var~155 ; |alu|result_var~155 ; out0             ;
+; |alu|result_var~156 ; |alu|result_var~156 ; out0             ;
+; |alu|carry~303      ; |alu|carry~303      ; out0             ;
+; |alu|carry~304      ; |alu|carry~304      ; out0             ;
+; |alu|carry~305      ; |alu|carry~305      ; out0             ;
+; |alu|carry~306      ; |alu|carry~306      ; out0             ;
+; |alu|carry~307      ; |alu|carry~307      ; out0             ;
+; |alu|result_var~157 ; |alu|result_var~157 ; out0             ;
+; |alu|result_var~158 ; |alu|result_var~158 ; out0             ;
+; |alu|carry~308      ; |alu|carry~308      ; out0             ;
+; |alu|carry~309      ; |alu|carry~309      ; out0             ;
+; |alu|carry~310      ; |alu|carry~310      ; out0             ;
+; |alu|carry~311      ; |alu|carry~311      ; out0             ;
+; |alu|carry~312      ; |alu|carry~312      ; out0             ;
+; |alu|result_var~319 ; |alu|result_var~319 ; out              ;
+; |alu|result_var~320 ; |alu|result_var~320 ; out              ;
+; |alu|result_var~321 ; |alu|result_var~321 ; out              ;
+; |alu|result_var~322 ; |alu|result_var~322 ; out              ;
+; |alu|result_var~327 ; |alu|result_var~327 ; out              ;
+; |alu|result_var~328 ; |alu|result_var~328 ; out              ;
+; |alu|result_var~329 ; |alu|result_var~329 ; out              ;
+; |alu|result_var~330 ; |alu|result_var~330 ; out              ;
+; |alu|a[16]          ; |alu|a[16]          ; out              ;
+; |alu|a[17]          ; |alu|a[17]          ; out              ;
+; |alu|a[18]          ; |alu|a[18]          ; out              ;
+; |alu|a[19]          ; |alu|a[19]          ; out              ;
+; |alu|a[20]          ; |alu|a[20]          ; out              ;
+; |alu|a[21]          ; |alu|a[21]          ; out              ;
+; |alu|a[22]          ; |alu|a[22]          ; out              ;
+; |alu|a[23]          ; |alu|a[23]          ; out              ;
+; |alu|a[24]          ; |alu|a[24]          ; out              ;
+; |alu|a[25]          ; |alu|a[25]          ; out              ;
+; |alu|a[26]          ; |alu|a[26]          ; out              ;
+; |alu|a[27]          ; |alu|a[27]          ; out              ;
+; |alu|a[28]          ; |alu|a[28]          ; out              ;
+; |alu|a[29]          ; |alu|a[29]          ; out              ;
+; |alu|a[30]          ; |alu|a[30]          ; out              ;
+; |alu|a[31]          ; |alu|a[31]          ; out              ;
+; |alu|b[0]           ; |alu|b[0]           ; out              ;
+; |alu|b[1]           ; |alu|b[1]           ; out              ;
+; |alu|b[2]           ; |alu|b[2]           ; out              ;
+; |alu|b[3]           ; |alu|b[3]           ; out              ;
+; |alu|b[4]           ; |alu|b[4]           ; out              ;
+; |alu|b[5]           ; |alu|b[5]           ; out              ;
+; |alu|b[6]           ; |alu|b[6]           ; out              ;
+; |alu|b[7]           ; |alu|b[7]           ; out              ;
+; |alu|b[8]           ; |alu|b[8]           ; out              ;
+; |alu|b[9]           ; |alu|b[9]           ; out              ;
+; |alu|b[10]          ; |alu|b[10]          ; out              ;
+; |alu|b[11]          ; |alu|b[11]          ; out              ;
+; |alu|b[12]          ; |alu|b[12]          ; out              ;
+; |alu|b[13]          ; |alu|b[13]          ; out              ;
+; |alu|b[14]          ; |alu|b[14]          ; out              ;
+; |alu|b[15]          ; |alu|b[15]          ; out              ;
+; |alu|b[16]          ; |alu|b[16]          ; out              ;
+; |alu|b[17]          ; |alu|b[17]          ; out              ;
+; |alu|b[18]          ; |alu|b[18]          ; out              ;
+; |alu|b[19]          ; |alu|b[19]          ; out              ;
+; |alu|b[20]          ; |alu|b[20]          ; out              ;
+; |alu|b[21]          ; |alu|b[21]          ; out              ;
+; |alu|b[22]          ; |alu|b[22]          ; out              ;
+; |alu|b[23]          ; |alu|b[23]          ; out              ;
+; |alu|b[24]          ; |alu|b[24]          ; out              ;
+; |alu|b[25]          ; |alu|b[25]          ; out              ;
+; |alu|b[26]          ; |alu|b[26]          ; out              ;
+; |alu|b[27]          ; |alu|b[27]          ; out              ;
+; |alu|b[28]          ; |alu|b[28]          ; out              ;
+; |alu|b[29]          ; |alu|b[29]          ; out              ;
+; |alu|b[30]          ; |alu|b[30]          ; out              ;
+; |alu|b[31]          ; |alu|b[31]          ; out              ;
+; |alu|result[20]     ; |alu|result[20]     ; pin_out          ;
+; |alu|result[21]     ; |alu|result[21]     ; pin_out          ;
+; |alu|result[22]     ; |alu|result[22]     ; pin_out          ;
+; |alu|result[23]     ; |alu|result[23]     ; pin_out          ;
+; |alu|result[28]     ; |alu|result[28]     ; pin_out          ;
+; |alu|result[29]     ; |alu|result[29]     ; pin_out          ;
+; |alu|result[30]     ; |alu|result[30]     ; pin_out          ;
+; |alu|result[31]     ; |alu|result[31]     ; pin_out          ;
+; |alu|zero           ; |alu|zero           ; pin_out          ;
+; |alu|Equal6~0       ; |alu|Equal6~0       ; out0             ;
++---------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------+
+; Missing 1-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |alu|result_var~1   ; |alu|result_var~1   ; out0             ;
+; |alu|result_var~2   ; |alu|result_var~2   ; out0             ;
+; |alu|result_var~3   ; |alu|result_var~3   ; out0             ;
+; |alu|result_var~4   ; |alu|result_var~4   ; out0             ;
+; |alu|result_var~5   ; |alu|result_var~5   ; out0             ;
+; |alu|result_var~6   ; |alu|result_var~6   ; out0             ;
+; |alu|result_var~7   ; |alu|result_var~7   ; out0             ;
+; |alu|result_var~8   ; |alu|result_var~8   ; out0             ;
+; |alu|result_var~9   ; |alu|result_var~9   ; out0             ;
+; |alu|result_var~10  ; |alu|result_var~10  ; out0             ;
+; |alu|result_var~11  ; |alu|result_var~11  ; out0             ;
+; |alu|result_var~12  ; |alu|result_var~12  ; out0             ;
+; |alu|result_var~13  ; |alu|result_var~13  ; out0             ;
+; |alu|result_var~14  ; |alu|result_var~14  ; out0             ;
+; |alu|result_var~15  ; |alu|result_var~15  ; out0             ;
+; |alu|result_var~16  ; |alu|result_var~16  ; out0             ;
+; |alu|result_var~17  ; |alu|result_var~17  ; out0             ;
+; |alu|result_var~18  ; |alu|result_var~18  ; out0             ;
+; |alu|result_var~19  ; |alu|result_var~19  ; out0             ;
+; |alu|result_var~20  ; |alu|result_var~20  ; out0             ;
+; |alu|result_var~21  ; |alu|result_var~21  ; out0             ;
+; |alu|result_var~22  ; |alu|result_var~22  ; out0             ;
+; |alu|result_var~23  ; |alu|result_var~23  ; out0             ;
+; |alu|result_var~24  ; |alu|result_var~24  ; out0             ;
+; |alu|result_var~25  ; |alu|result_var~25  ; out0             ;
+; |alu|result_var~26  ; |alu|result_var~26  ; out0             ;
+; |alu|result_var~27  ; |alu|result_var~27  ; out0             ;
+; |alu|result_var~28  ; |alu|result_var~28  ; out0             ;
+; |alu|result_var~29  ; |alu|result_var~29  ; out0             ;
+; |alu|result_var~30  ; |alu|result_var~30  ; out0             ;
+; |alu|result_var~31  ; |alu|result_var~31  ; out0             ;
+; |alu|result_var~32  ; |alu|result_var~32  ; out0             ;
+; |alu|carry~0        ; |alu|carry~0        ; out0             ;
+; |alu|result_var~35  ; |alu|result_var~35  ; out0             ;
+; |alu|carry~1        ; |alu|carry~1        ; out0             ;
+; |alu|carry~2        ; |alu|carry~2        ; out0             ;
+; |alu|carry~3        ; |alu|carry~3        ; out0             ;
+; |alu|carry~4        ; |alu|carry~4        ; out0             ;
+; |alu|carry~5        ; |alu|carry~5        ; out0             ;
+; |alu|carry~6        ; |alu|carry~6        ; out0             ;
+; |alu|carry~7        ; |alu|carry~7        ; out0             ;
+; |alu|carry~8        ; |alu|carry~8        ; out0             ;
+; |alu|carry~9        ; |alu|carry~9        ; out0             ;
+; |alu|carry~10       ; |alu|carry~10       ; out0             ;
+; |alu|carry~11       ; |alu|carry~11       ; out0             ;
+; |alu|carry~12       ; |alu|carry~12       ; out0             ;
+; |alu|carry~13       ; |alu|carry~13       ; out0             ;
+; |alu|carry~14       ; |alu|carry~14       ; out0             ;
+; |alu|carry~15       ; |alu|carry~15       ; out0             ;
+; |alu|carry~16       ; |alu|carry~16       ; out0             ;
+; |alu|carry~17       ; |alu|carry~17       ; out0             ;
+; |alu|carry~18       ; |alu|carry~18       ; out0             ;
+; |alu|carry~19       ; |alu|carry~19       ; out0             ;
+; |alu|carry~20       ; |alu|carry~20       ; out0             ;
+; |alu|carry~21       ; |alu|carry~21       ; out0             ;
+; |alu|carry~22       ; |alu|carry~22       ; out0             ;
+; |alu|carry~23       ; |alu|carry~23       ; out0             ;
+; |alu|carry~24       ; |alu|carry~24       ; out0             ;
+; |alu|carry~25       ; |alu|carry~25       ; out0             ;
+; |alu|carry~26       ; |alu|carry~26       ; out0             ;
+; |alu|carry~27       ; |alu|carry~27       ; out0             ;
+; |alu|carry~28       ; |alu|carry~28       ; out0             ;
+; |alu|carry~29       ; |alu|carry~29       ; out0             ;
+; |alu|carry~30       ; |alu|carry~30       ; out0             ;
+; |alu|carry~31       ; |alu|carry~31       ; out0             ;
+; |alu|carry~32       ; |alu|carry~32       ; out0             ;
+; |alu|carry~33       ; |alu|carry~33       ; out0             ;
+; |alu|carry~34       ; |alu|carry~34       ; out0             ;
+; |alu|carry~35       ; |alu|carry~35       ; out0             ;
+; |alu|carry~36       ; |alu|carry~36       ; out0             ;
+; |alu|carry~37       ; |alu|carry~37       ; out0             ;
+; |alu|carry~38       ; |alu|carry~38       ; out0             ;
+; |alu|carry~39       ; |alu|carry~39       ; out0             ;
+; |alu|carry~40       ; |alu|carry~40       ; out0             ;
+; |alu|carry~41       ; |alu|carry~41       ; out0             ;
+; |alu|carry~42       ; |alu|carry~42       ; out0             ;
+; |alu|carry~43       ; |alu|carry~43       ; out0             ;
+; |alu|carry~44       ; |alu|carry~44       ; out0             ;
+; |alu|carry~45       ; |alu|carry~45       ; out0             ;
+; |alu|carry~46       ; |alu|carry~46       ; out0             ;
+; |alu|carry~47       ; |alu|carry~47       ; out0             ;
+; |alu|carry~48       ; |alu|carry~48       ; out0             ;
+; |alu|carry~49       ; |alu|carry~49       ; out0             ;
+; |alu|carry~50       ; |alu|carry~50       ; out0             ;
+; |alu|carry~51       ; |alu|carry~51       ; out0             ;
+; |alu|carry~52       ; |alu|carry~52       ; out0             ;
+; |alu|carry~53       ; |alu|carry~53       ; out0             ;
+; |alu|carry~54       ; |alu|carry~54       ; out0             ;
+; |alu|carry~55       ; |alu|carry~55       ; out0             ;
+; |alu|carry~56       ; |alu|carry~56       ; out0             ;
+; |alu|carry~57       ; |alu|carry~57       ; out0             ;
+; |alu|carry~58       ; |alu|carry~58       ; out0             ;
+; |alu|carry~59       ; |alu|carry~59       ; out0             ;
+; |alu|carry~60       ; |alu|carry~60       ; out0             ;
+; |alu|carry~61       ; |alu|carry~61       ; out0             ;
+; |alu|carry~62       ; |alu|carry~62       ; out0             ;
+; |alu|carry~63       ; |alu|carry~63       ; out0             ;
+; |alu|carry~64       ; |alu|carry~64       ; out0             ;
+; |alu|carry~65       ; |alu|carry~65       ; out0             ;
+; |alu|carry~66       ; |alu|carry~66       ; out0             ;
+; |alu|carry~67       ; |alu|carry~67       ; out0             ;
+; |alu|carry~68       ; |alu|carry~68       ; out0             ;
+; |alu|carry~69       ; |alu|carry~69       ; out0             ;
+; |alu|carry~70       ; |alu|carry~70       ; out0             ;
+; |alu|carry~71       ; |alu|carry~71       ; out0             ;
+; |alu|carry~72       ; |alu|carry~72       ; out0             ;
+; |alu|carry~73       ; |alu|carry~73       ; out0             ;
+; |alu|carry~74       ; |alu|carry~74       ; out0             ;
+; |alu|carry~75       ; |alu|carry~75       ; out0             ;
+; |alu|carry~76       ; |alu|carry~76       ; out0             ;
+; |alu|carry~77       ; |alu|carry~77       ; out0             ;
+; |alu|carry~78       ; |alu|carry~78       ; out0             ;
+; |alu|carry~79       ; |alu|carry~79       ; out0             ;
+; |alu|carry~80       ; |alu|carry~80       ; out0             ;
+; |alu|carry~81       ; |alu|carry~81       ; out0             ;
+; |alu|carry~82       ; |alu|carry~82       ; out0             ;
+; |alu|carry~83       ; |alu|carry~83       ; out0             ;
+; |alu|carry~84       ; |alu|carry~84       ; out0             ;
+; |alu|carry~85       ; |alu|carry~85       ; out0             ;
+; |alu|carry~86       ; |alu|carry~86       ; out0             ;
+; |alu|carry~87       ; |alu|carry~87       ; out0             ;
+; |alu|carry~88       ; |alu|carry~88       ; out0             ;
+; |alu|carry~89       ; |alu|carry~89       ; out0             ;
+; |alu|carry~90       ; |alu|carry~90       ; out0             ;
+; |alu|carry~91       ; |alu|carry~91       ; out0             ;
+; |alu|carry~92       ; |alu|carry~92       ; out0             ;
+; |alu|carry~93       ; |alu|carry~93       ; out0             ;
+; |alu|carry~94       ; |alu|carry~94       ; out0             ;
+; |alu|carry~95       ; |alu|carry~95       ; out0             ;
+; |alu|carry~97       ; |alu|carry~97       ; out0             ;
+; |alu|carry~99       ; |alu|carry~99       ; out0             ;
+; |alu|carry~116      ; |alu|carry~116      ; out0             ;
+; |alu|carry~119      ; |alu|carry~119      ; out0             ;
+; |alu|carry~121      ; |alu|carry~121      ; out0             ;
+; |alu|carry~124      ; |alu|carry~124      ; out0             ;
+; |alu|carry~126      ; |alu|carry~126      ; out0             ;
+; |alu|carry~129      ; |alu|carry~129      ; out0             ;
+; |alu|carry~131      ; |alu|carry~131      ; out0             ;
+; |alu|carry~134      ; |alu|carry~134      ; out0             ;
+; |alu|carry~161      ; |alu|carry~161      ; out0             ;
+; |alu|carry~166      ; |alu|carry~166      ; out0             ;
+; |alu|carry~171      ; |alu|carry~171      ; out0             ;
+; |alu|carry~176      ; |alu|carry~176      ; out0             ;
+; |alu|carry~181      ; |alu|carry~181      ; out0             ;
+; |alu|carry~186      ; |alu|carry~186      ; out0             ;
+; |alu|carry~191      ; |alu|carry~191      ; out0             ;
+; |alu|carry~196      ; |alu|carry~196      ; out0             ;
+; |alu|carry~201      ; |alu|carry~201      ; out0             ;
+; |alu|carry~206      ; |alu|carry~206      ; out0             ;
+; |alu|carry~211      ; |alu|carry~211      ; out0             ;
+; |alu|carry~216      ; |alu|carry~216      ; out0             ;
+; |alu|carry~221      ; |alu|carry~221      ; out0             ;
+; |alu|carry~226      ; |alu|carry~226      ; out0             ;
+; |alu|carry~231      ; |alu|carry~231      ; out0             ;
+; |alu|carry~236      ; |alu|carry~236      ; out0             ;
+; |alu|result_var~159 ; |alu|result_var~159 ; out              ;
+; |alu|result_var~160 ; |alu|result_var~160 ; out              ;
+; |alu|result_var~161 ; |alu|result_var~161 ; out              ;
+; |alu|result_var~162 ; |alu|result_var~162 ; out              ;
+; |alu|result_var~163 ; |alu|result_var~163 ; out              ;
+; |alu|result_var~164 ; |alu|result_var~164 ; out              ;
+; |alu|result_var~165 ; |alu|result_var~165 ; out              ;
+; |alu|result_var~166 ; |alu|result_var~166 ; out              ;
+; |alu|result_var~167 ; |alu|result_var~167 ; out              ;
+; |alu|result_var~168 ; |alu|result_var~168 ; out              ;
+; |alu|result_var~169 ; |alu|result_var~169 ; out              ;
+; |alu|result_var~170 ; |alu|result_var~170 ; out              ;
+; |alu|result_var~171 ; |alu|result_var~171 ; out              ;
+; |alu|result_var~172 ; |alu|result_var~172 ; out              ;
+; |alu|result_var~173 ; |alu|result_var~173 ; out              ;
+; |alu|result_var~174 ; |alu|result_var~174 ; out              ;
+; |alu|result_var~175 ; |alu|result_var~175 ; out              ;
+; |alu|result_var~176 ; |alu|result_var~176 ; out              ;
+; |alu|result_var~177 ; |alu|result_var~177 ; out              ;
+; |alu|result_var~178 ; |alu|result_var~178 ; out              ;
+; |alu|result_var~179 ; |alu|result_var~179 ; out              ;
+; |alu|result_var~180 ; |alu|result_var~180 ; out              ;
+; |alu|result_var~181 ; |alu|result_var~181 ; out              ;
+; |alu|result_var~182 ; |alu|result_var~182 ; out              ;
+; |alu|result_var~183 ; |alu|result_var~183 ; out              ;
+; |alu|result_var~184 ; |alu|result_var~184 ; out              ;
+; |alu|result_var~185 ; |alu|result_var~185 ; out              ;
+; |alu|result_var~186 ; |alu|result_var~186 ; out              ;
+; |alu|result_var~187 ; |alu|result_var~187 ; out              ;
+; |alu|result_var~188 ; |alu|result_var~188 ; out              ;
+; |alu|result_var~189 ; |alu|result_var~189 ; out              ;
+; |alu|result_var~190 ; |alu|result_var~190 ; out              ;
+; |alu|result_var~191 ; |alu|result_var~191 ; out              ;
+; |alu|result_var~192 ; |alu|result_var~192 ; out              ;
+; |alu|result_var~193 ; |alu|result_var~193 ; out              ;
+; |alu|result_var~194 ; |alu|result_var~194 ; out              ;
+; |alu|result_var~195 ; |alu|result_var~195 ; out              ;
+; |alu|result_var~196 ; |alu|result_var~196 ; out              ;
+; |alu|result_var~197 ; |alu|result_var~197 ; out              ;
+; |alu|result_var~198 ; |alu|result_var~198 ; out              ;
+; |alu|result_var~199 ; |alu|result_var~199 ; out              ;
+; |alu|result_var~200 ; |alu|result_var~200 ; out              ;
+; |alu|result_var~201 ; |alu|result_var~201 ; out              ;
+; |alu|result_var~202 ; |alu|result_var~202 ; out              ;
+; |alu|result_var~203 ; |alu|result_var~203 ; out              ;
+; |alu|result_var~204 ; |alu|result_var~204 ; out              ;
+; |alu|result_var~205 ; |alu|result_var~205 ; out              ;
+; |alu|result_var~206 ; |alu|result_var~206 ; out              ;
+; |alu|result_var~207 ; |alu|result_var~207 ; out              ;
+; |alu|result_var~208 ; |alu|result_var~208 ; out              ;
+; |alu|result_var~209 ; |alu|result_var~209 ; out              ;
+; |alu|result_var~210 ; |alu|result_var~210 ; out              ;
+; |alu|result_var~211 ; |alu|result_var~211 ; out              ;
+; |alu|result_var~212 ; |alu|result_var~212 ; out              ;
+; |alu|result_var~213 ; |alu|result_var~213 ; out              ;
+; |alu|result_var~214 ; |alu|result_var~214 ; out              ;
+; |alu|result_var~215 ; |alu|result_var~215 ; out              ;
+; |alu|result_var~216 ; |alu|result_var~216 ; out              ;
+; |alu|result_var~217 ; |alu|result_var~217 ; out              ;
+; |alu|result_var~218 ; |alu|result_var~218 ; out              ;
+; |alu|result_var~219 ; |alu|result_var~219 ; out              ;
+; |alu|result_var~220 ; |alu|result_var~220 ; out              ;
+; |alu|result_var~221 ; |alu|result_var~221 ; out              ;
+; |alu|result_var~222 ; |alu|result_var~222 ; out              ;
+; |alu|result_var~223 ; |alu|result_var~223 ; out              ;
+; |alu|result_var~224 ; |alu|result_var~224 ; out              ;
+; |alu|result_var~225 ; |alu|result_var~225 ; out              ;
+; |alu|result_var~226 ; |alu|result_var~226 ; out              ;
+; |alu|result_var~227 ; |alu|result_var~227 ; out              ;
+; |alu|result_var~228 ; |alu|result_var~228 ; out              ;
+; |alu|result_var~229 ; |alu|result_var~229 ; out              ;
+; |alu|result_var~230 ; |alu|result_var~230 ; out              ;
+; |alu|result_var~231 ; |alu|result_var~231 ; out              ;
+; |alu|result_var~232 ; |alu|result_var~232 ; out              ;
+; |alu|result_var~233 ; |alu|result_var~233 ; out              ;
+; |alu|result_var~234 ; |alu|result_var~234 ; out              ;
+; |alu|result_var~235 ; |alu|result_var~235 ; out              ;
+; |alu|result_var~236 ; |alu|result_var~236 ; out              ;
+; |alu|result_var~237 ; |alu|result_var~237 ; out              ;
+; |alu|result_var~238 ; |alu|result_var~238 ; out              ;
+; |alu|result_var~239 ; |alu|result_var~239 ; out              ;
+; |alu|result_var~240 ; |alu|result_var~240 ; out              ;
+; |alu|result_var~241 ; |alu|result_var~241 ; out              ;
+; |alu|result_var~242 ; |alu|result_var~242 ; out              ;
+; |alu|result_var~243 ; |alu|result_var~243 ; out              ;
+; |alu|result_var~244 ; |alu|result_var~244 ; out              ;
+; |alu|result_var~245 ; |alu|result_var~245 ; out              ;
+; |alu|result_var~246 ; |alu|result_var~246 ; out              ;
+; |alu|result_var~247 ; |alu|result_var~247 ; out              ;
+; |alu|result_var~248 ; |alu|result_var~248 ; out              ;
+; |alu|result_var~249 ; |alu|result_var~249 ; out              ;
+; |alu|result_var~250 ; |alu|result_var~250 ; out              ;
+; |alu|result_var~251 ; |alu|result_var~251 ; out              ;
+; |alu|result_var~252 ; |alu|result_var~252 ; out              ;
+; |alu|result_var~253 ; |alu|result_var~253 ; out              ;
+; |alu|result_var~254 ; |alu|result_var~254 ; out              ;
+; |alu|result_var~255 ; |alu|result_var~255 ; out              ;
+; |alu|result_var~256 ; |alu|result_var~256 ; out              ;
+; |alu|result_var~257 ; |alu|result_var~257 ; out              ;
+; |alu|result_var~258 ; |alu|result_var~258 ; out              ;
+; |alu|result_var~259 ; |alu|result_var~259 ; out              ;
+; |alu|result_var~260 ; |alu|result_var~260 ; out              ;
+; |alu|result_var~261 ; |alu|result_var~261 ; out              ;
+; |alu|result_var~262 ; |alu|result_var~262 ; out              ;
+; |alu|result_var~263 ; |alu|result_var~263 ; out              ;
+; |alu|result_var~264 ; |alu|result_var~264 ; out              ;
+; |alu|result_var~265 ; |alu|result_var~265 ; out              ;
+; |alu|result_var~266 ; |alu|result_var~266 ; out              ;
+; |alu|result_var~267 ; |alu|result_var~267 ; out              ;
+; |alu|result_var~268 ; |alu|result_var~268 ; out              ;
+; |alu|result_var~269 ; |alu|result_var~269 ; out              ;
+; |alu|result_var~270 ; |alu|result_var~270 ; out              ;
+; |alu|result_var~271 ; |alu|result_var~271 ; out              ;
+; |alu|result_var~272 ; |alu|result_var~272 ; out              ;
+; |alu|result_var~273 ; |alu|result_var~273 ; out              ;
+; |alu|result_var~274 ; |alu|result_var~274 ; out              ;
+; |alu|result_var~275 ; |alu|result_var~275 ; out              ;
+; |alu|result_var~276 ; |alu|result_var~276 ; out              ;
+; |alu|result_var~277 ; |alu|result_var~277 ; out              ;
+; |alu|result_var~278 ; |alu|result_var~278 ; out              ;
+; |alu|result_var~279 ; |alu|result_var~279 ; out              ;
+; |alu|result_var~280 ; |alu|result_var~280 ; out              ;
+; |alu|result_var~281 ; |alu|result_var~281 ; out              ;
+; |alu|result_var~282 ; |alu|result_var~282 ; out              ;
+; |alu|result_var~283 ; |alu|result_var~283 ; out              ;
+; |alu|result_var~284 ; |alu|result_var~284 ; out              ;
+; |alu|result_var~285 ; |alu|result_var~285 ; out              ;
+; |alu|result_var~286 ; |alu|result_var~286 ; out              ;
+; |alu|result_var~287 ; |alu|result_var~287 ; out              ;
+; |alu|result_var~288 ; |alu|result_var~288 ; out              ;
+; |alu|result_var~289 ; |alu|result_var~289 ; out              ;
+; |alu|result_var~290 ; |alu|result_var~290 ; out              ;
+; |alu|result_var~291 ; |alu|result_var~291 ; out              ;
+; |alu|result_var~292 ; |alu|result_var~292 ; out              ;
+; |alu|result_var~293 ; |alu|result_var~293 ; out              ;
+; |alu|result_var~294 ; |alu|result_var~294 ; out              ;
+; |alu|result_var~295 ; |alu|result_var~295 ; out              ;
+; |alu|result_var~296 ; |alu|result_var~296 ; out              ;
+; |alu|result_var~297 ; |alu|result_var~297 ; out              ;
+; |alu|result_var~298 ; |alu|result_var~298 ; out              ;
+; |alu|result_var~299 ; |alu|result_var~299 ; out              ;
+; |alu|result_var~300 ; |alu|result_var~300 ; out              ;
+; |alu|result_var~301 ; |alu|result_var~301 ; out              ;
+; |alu|result_var~302 ; |alu|result_var~302 ; out              ;
+; |alu|result_var~303 ; |alu|result_var~303 ; out              ;
+; |alu|result_var~304 ; |alu|result_var~304 ; out              ;
+; |alu|result_var~305 ; |alu|result_var~305 ; out              ;
+; |alu|result_var~306 ; |alu|result_var~306 ; out              ;
+; |alu|result_var~307 ; |alu|result_var~307 ; out              ;
+; |alu|result_var~308 ; |alu|result_var~308 ; out              ;
+; |alu|result_var~309 ; |alu|result_var~309 ; out              ;
+; |alu|result_var~310 ; |alu|result_var~310 ; out              ;
+; |alu|result_var~311 ; |alu|result_var~311 ; out              ;
+; |alu|result_var~312 ; |alu|result_var~312 ; out              ;
+; |alu|result_var~313 ; |alu|result_var~313 ; out              ;
+; |alu|result_var~314 ; |alu|result_var~314 ; out              ;
+; |alu|result_var~315 ; |alu|result_var~315 ; out              ;
+; |alu|result_var~316 ; |alu|result_var~316 ; out              ;
+; |alu|result_var~317 ; |alu|result_var~317 ; out              ;
+; |alu|result_var~318 ; |alu|result_var~318 ; out              ;
+; |alu|result_var~323 ; |alu|result_var~323 ; out              ;
+; |alu|result_var~324 ; |alu|result_var~324 ; out              ;
+; |alu|result_var~325 ; |alu|result_var~325 ; out              ;
+; |alu|result_var~326 ; |alu|result_var~326 ; out              ;
+; |alu|result_var~331 ; |alu|result_var~331 ; out              ;
+; |alu|result_var~332 ; |alu|result_var~332 ; out              ;
+; |alu|result_var~333 ; |alu|result_var~333 ; out              ;
+; |alu|result_var~334 ; |alu|result_var~334 ; out              ;
+; |alu|result_var~335 ; |alu|result_var~335 ; out              ;
+; |alu|result_var~336 ; |alu|result_var~336 ; out              ;
+; |alu|result_var~337 ; |alu|result_var~337 ; out              ;
+; |alu|result_var~338 ; |alu|result_var~338 ; out              ;
+; |alu|result_var~339 ; |alu|result_var~339 ; out              ;
+; |alu|result_var~340 ; |alu|result_var~340 ; out              ;
+; |alu|result_var~341 ; |alu|result_var~341 ; out              ;
+; |alu|result_var~342 ; |alu|result_var~342 ; out              ;
+; |alu|result_var~343 ; |alu|result_var~343 ; out              ;
+; |alu|result_var~344 ; |alu|result_var~344 ; out              ;
+; |alu|result_var~345 ; |alu|result_var~345 ; out              ;
+; |alu|result_var~346 ; |alu|result_var~346 ; out              ;
+; |alu|result_var~347 ; |alu|result_var~347 ; out              ;
+; |alu|result_var~348 ; |alu|result_var~348 ; out              ;
+; |alu|result_var~349 ; |alu|result_var~349 ; out              ;
+; |alu|result_var~350 ; |alu|result_var~350 ; out              ;
+; |alu|cout~0         ; |alu|cout~0         ; out              ;
+; |alu|cout~1         ; |alu|cout~1         ; out              ;
+; |alu|cout~2         ; |alu|cout~2         ; out              ;
+; |alu|cout~3         ; |alu|cout~3         ; out              ;
+; |alu|cout~4         ; |alu|cout~4         ; out              ;
+; |alu|a[0]           ; |alu|a[0]           ; out              ;
+; |alu|a[1]           ; |alu|a[1]           ; out              ;
+; |alu|a[2]           ; |alu|a[2]           ; out              ;
+; |alu|a[3]           ; |alu|a[3]           ; out              ;
+; |alu|a[4]           ; |alu|a[4]           ; out              ;
+; |alu|a[5]           ; |alu|a[5]           ; out              ;
+; |alu|a[6]           ; |alu|a[6]           ; out              ;
+; |alu|a[7]           ; |alu|a[7]           ; out              ;
+; |alu|a[8]           ; |alu|a[8]           ; out              ;
+; |alu|a[9]           ; |alu|a[9]           ; out              ;
+; |alu|a[10]          ; |alu|a[10]          ; out              ;
+; |alu|a[11]          ; |alu|a[11]          ; out              ;
+; |alu|a[12]          ; |alu|a[12]          ; out              ;
+; |alu|a[13]          ; |alu|a[13]          ; out              ;
+; |alu|a[14]          ; |alu|a[14]          ; out              ;
+; |alu|a[15]          ; |alu|a[15]          ; out              ;
+; |alu|op[0]          ; |alu|op[0]          ; out              ;
+; |alu|op[1]          ; |alu|op[1]          ; out              ;
+; |alu|op[2]          ; |alu|op[2]          ; out              ;
+; |alu|result[0]      ; |alu|result[0]      ; pin_out          ;
+; |alu|result[1]      ; |alu|result[1]      ; pin_out          ;
+; |alu|result[2]      ; |alu|result[2]      ; pin_out          ;
+; |alu|result[3]      ; |alu|result[3]      ; pin_out          ;
+; |alu|result[4]      ; |alu|result[4]      ; pin_out          ;
+; |alu|result[5]      ; |alu|result[5]      ; pin_out          ;
+; |alu|result[6]      ; |alu|result[6]      ; pin_out          ;
+; |alu|result[7]      ; |alu|result[7]      ; pin_out          ;
+; |alu|result[8]      ; |alu|result[8]      ; pin_out          ;
+; |alu|result[9]      ; |alu|result[9]      ; pin_out          ;
+; |alu|result[10]     ; |alu|result[10]     ; pin_out          ;
+; |alu|result[11]     ; |alu|result[11]     ; pin_out          ;
+; |alu|result[12]     ; |alu|result[12]     ; pin_out          ;
+; |alu|result[13]     ; |alu|result[13]     ; pin_out          ;
+; |alu|result[14]     ; |alu|result[14]     ; pin_out          ;
+; |alu|result[15]     ; |alu|result[15]     ; pin_out          ;
+; |alu|result[16]     ; |alu|result[16]     ; pin_out          ;
+; |alu|result[17]     ; |alu|result[17]     ; pin_out          ;
+; |alu|result[18]     ; |alu|result[18]     ; pin_out          ;
+; |alu|result[19]     ; |alu|result[19]     ; pin_out          ;
+; |alu|result[24]     ; |alu|result[24]     ; pin_out          ;
+; |alu|result[25]     ; |alu|result[25]     ; pin_out          ;
+; |alu|result[26]     ; |alu|result[26]     ; pin_out          ;
+; |alu|result[27]     ; |alu|result[27]     ; pin_out          ;
+; |alu|cout           ; |alu|cout           ; pin_out          ;
+; |alu|Equal0~0       ; |alu|Equal0~0       ; out0             ;
+; |alu|Equal1~0       ; |alu|Equal1~0       ; out0             ;
+; |alu|Equal2~0       ; |alu|Equal2~0       ; out0             ;
+; |alu|Equal3~0       ; |alu|Equal3~0       ; out0             ;
+; |alu|Equal4~0       ; |alu|Equal4~0       ; out0             ;
+; |alu|Equal5~0       ; |alu|Equal5~0       ; out0             ;
++---------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------+
+; Missing 0-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |alu|result_var~159 ; |alu|result_var~159 ; out              ;
+; |alu|result_var~160 ; |alu|result_var~160 ; out              ;
+; |alu|result_var~161 ; |alu|result_var~161 ; out              ;
+; |alu|result_var~162 ; |alu|result_var~162 ; out              ;
+; |alu|result_var~163 ; |alu|result_var~163 ; out              ;
+; |alu|result_var~164 ; |alu|result_var~164 ; out              ;
+; |alu|result_var~165 ; |alu|result_var~165 ; out              ;
+; |alu|result_var~166 ; |alu|result_var~166 ; out              ;
+; |alu|result_var~167 ; |alu|result_var~167 ; out              ;
+; |alu|result_var~168 ; |alu|result_var~168 ; out              ;
+; |alu|result_var~169 ; |alu|result_var~169 ; out              ;
+; |alu|result_var~170 ; |alu|result_var~170 ; out              ;
+; |alu|result_var~171 ; |alu|result_var~171 ; out              ;
+; |alu|result_var~172 ; |alu|result_var~172 ; out              ;
+; |alu|result_var~173 ; |alu|result_var~173 ; out              ;
+; |alu|result_var~174 ; |alu|result_var~174 ; out              ;
+; |alu|result_var~175 ; |alu|result_var~175 ; out              ;
+; |alu|result_var~176 ; |alu|result_var~176 ; out              ;
+; |alu|result_var~177 ; |alu|result_var~177 ; out              ;
+; |alu|result_var~178 ; |alu|result_var~178 ; out              ;
+; |alu|result_var~179 ; |alu|result_var~179 ; out              ;
+; |alu|result_var~180 ; |alu|result_var~180 ; out              ;
+; |alu|result_var~181 ; |alu|result_var~181 ; out              ;
+; |alu|result_var~182 ; |alu|result_var~182 ; out              ;
+; |alu|result_var~183 ; |alu|result_var~183 ; out              ;
+; |alu|result_var~184 ; |alu|result_var~184 ; out              ;
+; |alu|result_var~185 ; |alu|result_var~185 ; out              ;
+; |alu|result_var~186 ; |alu|result_var~186 ; out              ;
+; |alu|result_var~187 ; |alu|result_var~187 ; out              ;
+; |alu|result_var~188 ; |alu|result_var~188 ; out              ;
+; |alu|result_var~189 ; |alu|result_var~189 ; out              ;
+; |alu|result_var~190 ; |alu|result_var~190 ; out              ;
+; |alu|result_var~191 ; |alu|result_var~191 ; out              ;
+; |alu|result_var~192 ; |alu|result_var~192 ; out              ;
+; |alu|result_var~193 ; |alu|result_var~193 ; out              ;
+; |alu|result_var~194 ; |alu|result_var~194 ; out              ;
+; |alu|result_var~195 ; |alu|result_var~195 ; out              ;
+; |alu|result_var~196 ; |alu|result_var~196 ; out              ;
+; |alu|result_var~197 ; |alu|result_var~197 ; out              ;
+; |alu|result_var~198 ; |alu|result_var~198 ; out              ;
+; |alu|result_var~199 ; |alu|result_var~199 ; out              ;
+; |alu|result_var~200 ; |alu|result_var~200 ; out              ;
+; |alu|result_var~201 ; |alu|result_var~201 ; out              ;
+; |alu|result_var~202 ; |alu|result_var~202 ; out              ;
+; |alu|result_var~203 ; |alu|result_var~203 ; out              ;
+; |alu|result_var~204 ; |alu|result_var~204 ; out              ;
+; |alu|result_var~205 ; |alu|result_var~205 ; out              ;
+; |alu|result_var~206 ; |alu|result_var~206 ; out              ;
+; |alu|result_var~207 ; |alu|result_var~207 ; out              ;
+; |alu|result_var~208 ; |alu|result_var~208 ; out              ;
+; |alu|result_var~209 ; |alu|result_var~209 ; out              ;
+; |alu|result_var~210 ; |alu|result_var~210 ; out              ;
+; |alu|result_var~211 ; |alu|result_var~211 ; out              ;
+; |alu|result_var~212 ; |alu|result_var~212 ; out              ;
+; |alu|result_var~213 ; |alu|result_var~213 ; out              ;
+; |alu|result_var~214 ; |alu|result_var~214 ; out              ;
+; |alu|result_var~215 ; |alu|result_var~215 ; out              ;
+; |alu|result_var~216 ; |alu|result_var~216 ; out              ;
+; |alu|result_var~217 ; |alu|result_var~217 ; out              ;
+; |alu|result_var~218 ; |alu|result_var~218 ; out              ;
+; |alu|result_var~219 ; |alu|result_var~219 ; out              ;
+; |alu|result_var~220 ; |alu|result_var~220 ; out              ;
+; |alu|result_var~221 ; |alu|result_var~221 ; out              ;
+; |alu|result_var~222 ; |alu|result_var~222 ; out              ;
+; |alu|result_var~223 ; |alu|result_var~223 ; out              ;
+; |alu|result_var~224 ; |alu|result_var~224 ; out              ;
+; |alu|result_var~225 ; |alu|result_var~225 ; out              ;
+; |alu|result_var~226 ; |alu|result_var~226 ; out              ;
+; |alu|result_var~227 ; |alu|result_var~227 ; out              ;
+; |alu|result_var~228 ; |alu|result_var~228 ; out              ;
+; |alu|result_var~229 ; |alu|result_var~229 ; out              ;
+; |alu|result_var~230 ; |alu|result_var~230 ; out              ;
+; |alu|result_var~231 ; |alu|result_var~231 ; out              ;
+; |alu|result_var~232 ; |alu|result_var~232 ; out              ;
+; |alu|result_var~233 ; |alu|result_var~233 ; out              ;
+; |alu|result_var~234 ; |alu|result_var~234 ; out              ;
+; |alu|result_var~235 ; |alu|result_var~235 ; out              ;
+; |alu|result_var~236 ; |alu|result_var~236 ; out              ;
+; |alu|result_var~237 ; |alu|result_var~237 ; out              ;
+; |alu|result_var~238 ; |alu|result_var~238 ; out              ;
+; |alu|result_var~239 ; |alu|result_var~239 ; out              ;
+; |alu|result_var~240 ; |alu|result_var~240 ; out              ;
+; |alu|result_var~241 ; |alu|result_var~241 ; out              ;
+; |alu|result_var~242 ; |alu|result_var~242 ; out              ;
+; |alu|result_var~243 ; |alu|result_var~243 ; out              ;
+; |alu|result_var~244 ; |alu|result_var~244 ; out              ;
+; |alu|result_var~245 ; |alu|result_var~245 ; out              ;
+; |alu|result_var~246 ; |alu|result_var~246 ; out              ;
+; |alu|result_var~247 ; |alu|result_var~247 ; out              ;
+; |alu|result_var~248 ; |alu|result_var~248 ; out              ;
+; |alu|result_var~249 ; |alu|result_var~249 ; out              ;
+; |alu|result_var~250 ; |alu|result_var~250 ; out              ;
+; |alu|result_var~251 ; |alu|result_var~251 ; out              ;
+; |alu|result_var~252 ; |alu|result_var~252 ; out              ;
+; |alu|result_var~253 ; |alu|result_var~253 ; out              ;
+; |alu|result_var~254 ; |alu|result_var~254 ; out              ;
+; |alu|result_var~255 ; |alu|result_var~255 ; out              ;
+; |alu|result_var~256 ; |alu|result_var~256 ; out              ;
+; |alu|result_var~257 ; |alu|result_var~257 ; out              ;
+; |alu|result_var~258 ; |alu|result_var~258 ; out              ;
+; |alu|result_var~259 ; |alu|result_var~259 ; out              ;
+; |alu|result_var~260 ; |alu|result_var~260 ; out              ;
+; |alu|result_var~261 ; |alu|result_var~261 ; out              ;
+; |alu|result_var~262 ; |alu|result_var~262 ; out              ;
+; |alu|result_var~263 ; |alu|result_var~263 ; out              ;
+; |alu|result_var~264 ; |alu|result_var~264 ; out              ;
+; |alu|result_var~265 ; |alu|result_var~265 ; out              ;
+; |alu|result_var~266 ; |alu|result_var~266 ; out              ;
+; |alu|result_var~267 ; |alu|result_var~267 ; out              ;
+; |alu|result_var~268 ; |alu|result_var~268 ; out              ;
+; |alu|result_var~269 ; |alu|result_var~269 ; out              ;
+; |alu|result_var~270 ; |alu|result_var~270 ; out              ;
+; |alu|result_var~271 ; |alu|result_var~271 ; out              ;
+; |alu|result_var~272 ; |alu|result_var~272 ; out              ;
+; |alu|result_var~273 ; |alu|result_var~273 ; out              ;
+; |alu|result_var~274 ; |alu|result_var~274 ; out              ;
+; |alu|result_var~275 ; |alu|result_var~275 ; out              ;
+; |alu|result_var~276 ; |alu|result_var~276 ; out              ;
+; |alu|result_var~277 ; |alu|result_var~277 ; out              ;
+; |alu|result_var~278 ; |alu|result_var~278 ; out              ;
+; |alu|result_var~279 ; |alu|result_var~279 ; out              ;
+; |alu|result_var~280 ; |alu|result_var~280 ; out              ;
+; |alu|result_var~281 ; |alu|result_var~281 ; out              ;
+; |alu|result_var~282 ; |alu|result_var~282 ; out              ;
+; |alu|result_var~283 ; |alu|result_var~283 ; out              ;
+; |alu|result_var~284 ; |alu|result_var~284 ; out              ;
+; |alu|result_var~285 ; |alu|result_var~285 ; out              ;
+; |alu|result_var~286 ; |alu|result_var~286 ; out              ;
+; |alu|result_var~287 ; |alu|result_var~287 ; out              ;
+; |alu|result_var~288 ; |alu|result_var~288 ; out              ;
+; |alu|result_var~289 ; |alu|result_var~289 ; out              ;
+; |alu|result_var~290 ; |alu|result_var~290 ; out              ;
+; |alu|result_var~291 ; |alu|result_var~291 ; out              ;
+; |alu|result_var~292 ; |alu|result_var~292 ; out              ;
+; |alu|result_var~293 ; |alu|result_var~293 ; out              ;
+; |alu|result_var~294 ; |alu|result_var~294 ; out              ;
+; |alu|result_var~295 ; |alu|result_var~295 ; out              ;
+; |alu|result_var~296 ; |alu|result_var~296 ; out              ;
+; |alu|result_var~297 ; |alu|result_var~297 ; out              ;
+; |alu|result_var~298 ; |alu|result_var~298 ; out              ;
+; |alu|result_var~299 ; |alu|result_var~299 ; out              ;
+; |alu|result_var~300 ; |alu|result_var~300 ; out              ;
+; |alu|result_var~301 ; |alu|result_var~301 ; out              ;
+; |alu|result_var~302 ; |alu|result_var~302 ; out              ;
+; |alu|result_var~303 ; |alu|result_var~303 ; out              ;
+; |alu|result_var~304 ; |alu|result_var~304 ; out              ;
+; |alu|result_var~305 ; |alu|result_var~305 ; out              ;
+; |alu|result_var~306 ; |alu|result_var~306 ; out              ;
+; |alu|result_var~307 ; |alu|result_var~307 ; out              ;
+; |alu|result_var~308 ; |alu|result_var~308 ; out              ;
+; |alu|result_var~309 ; |alu|result_var~309 ; out              ;
+; |alu|result_var~310 ; |alu|result_var~310 ; out              ;
+; |alu|result_var~311 ; |alu|result_var~311 ; out              ;
+; |alu|result_var~312 ; |alu|result_var~312 ; out              ;
+; |alu|result_var~313 ; |alu|result_var~313 ; out              ;
+; |alu|result_var~314 ; |alu|result_var~314 ; out              ;
+; |alu|result_var~315 ; |alu|result_var~315 ; out              ;
+; |alu|result_var~316 ; |alu|result_var~316 ; out              ;
+; |alu|result_var~317 ; |alu|result_var~317 ; out              ;
+; |alu|result_var~318 ; |alu|result_var~318 ; out              ;
+; |alu|cout~0         ; |alu|cout~0         ; out              ;
+; |alu|cout~1         ; |alu|cout~1         ; out              ;
+; |alu|cout~2         ; |alu|cout~2         ; out              ;
+; |alu|cout~3         ; |alu|cout~3         ; out              ;
+; |alu|cout~4         ; |alu|cout~4         ; out              ;
+; |alu|op[0]          ; |alu|op[0]          ; out              ;
+; |alu|op[1]          ; |alu|op[1]          ; out              ;
+; |alu|op[2]          ; |alu|op[2]          ; out              ;
+; |alu|cout           ; |alu|cout           ; pin_out          ;
+; |alu|Equal0~0       ; |alu|Equal0~0       ; out0             ;
+; |alu|Equal1~0       ; |alu|Equal1~0       ; out0             ;
+; |alu|Equal2~0       ; |alu|Equal2~0       ; out0             ;
+; |alu|Equal3~0       ; |alu|Equal3~0       ; out0             ;
+; |alu|Equal4~0       ; |alu|Equal4~0       ; out0             ;
+; |alu|Equal5~0       ; |alu|Equal5~0       ; out0             ;
++---------------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Jan 29 16:28:03 2026
+Info: Command: quartus_sim --simulation_results_format=VWF lab3a -c lab3a_qsim
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Info (324025): Using vector source file "Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab3a_vhdl/Waveform.vwf"
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_NEW_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PIN_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_IMPORT_PROMOTE_ASSIGNMENTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_TYPE for node ""
+Warning (136002): Ignored duplicate of assignment ALLOW_MULTIPLE_PERSONAS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_ASD_REGION_ID for node ""
+Warning (136002): Ignored duplicate of assignment CROSS_BOUNDARY_OPTIMIZATIONS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_CONSTANTS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PROPAGATE_INVERSIONS_ON_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
+Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
+Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      49.29 %
+Info (328052): Number of transitions in simulation is 2075
+Info (324045): Vector file lab3a_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 92 warnings
+    Info: Peak virtual memory: 215 megabytes
+    Info: Processing ended: Thu Jan 29 16:28:04 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
