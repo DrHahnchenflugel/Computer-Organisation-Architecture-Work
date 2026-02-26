@@ -1277,7 +1277,8 @@ TRANSITION_LIST("data_out[22]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 120.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 80.0;
 	}
 }
 
@@ -1350,7 +1351,8 @@ TRANSITION_LIST("data_out[14]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 120.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 80.0;
 	}
 }
 
@@ -1432,7 +1434,8 @@ TRANSITION_LIST("data_out[5]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 160.0;
-		LEVEL 1 FOR 120.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 80.0;
 	}
 }
 

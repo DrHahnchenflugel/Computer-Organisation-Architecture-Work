@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\users\drhahnchenflugel\Documents\GitHub\Computer-Organisation-Architecture-Work\lab4\lab4a\simulation\qsim
+vdata_mem
+Z1 I<H<Mjiae60Qe=:P>hEmO=2
+Z2 V[4:GgDn=oc<7[cb3k2hlo2
+Z3 dC:\users\drhahnchenflugel\Documents\GitHub\Computer-Organisation-Architecture-Work\lab4\lab4a\simulation\qsim
+Z4 w1772115394
+Z5 8lab4_a.vo
+Z6 Flab4_a.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+!i10b 1
+Z9 !s100 =<FEBGdJH0G0LWahR51CX3
+!s85 0
+Z10 !s108 1772115395.782000
+Z11 !s107 lab4_a.vo|
+Z12 !s90 -work|work|lab4_a.vo|
+!s101 -O0
+vdata_mem_vlg_check_tst
+!i10b 1
+!s100 R=cI`n5Z[SglU<ZCCkXgL2
+I:G1kQX6HQ:@bZelf44_E@1
+ViRY:BS6O^Am1;?O`[0bKT3
+R3
+Z13 w1772115393
+Z14 8lab4_a.vt
+Z15 Flab4_a.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z16 !s108 1772115396.308000
+Z17 !s107 lab4_a.vt|
+Z18 !s90 -work|work|lab4_a.vt|
+!s101 -O0
+R8
+vdata_mem_vlg_sample_tst
+!i10b 1
+!s100 d;aQ^5W^zl9@Eg]B>hblA1
+I4?1Uj:AUA1C`eQj3<FB8M2
+V1RkYmZG]TfekzW9Ui<N082
+R3
+R13
+R14
+R15
+L0 29
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8
+vdata_mem_vlg_vec_tst
+!i10b 1
+!s100 ?OcfVI2dn7e;gfJKe=:[I2
+IUGS]l5LfNE1;jidD7ZmT]0
+V@K8D@ZkME;XaT1;7GzGcL3
+R3
+R13
+R14
+R15
+L0 717
+R7
+r1
+!s85 0
+31
+R16
+R17
+R18
+!s101 -O0
+R8

@@ -20,10 +20,13 @@ BEGIN
 	BEGIN
 		IF clk'EVENT AND clk = '0' AND en = '1' THEN --on falling edge of clock and EN is active high
 			IF wen = '1' THEN 	-- if write enabled
+				data_out <= (others => '0');
 				mem(to_integer(addr)) <= data_in;
 			ELSE						-- if write disabled
 				data_out <= mem(to_integer(addr));
 			END IF; -- end write if
+		ELSIF clk'EVENT AND clk = '0' THEN
+			data_out <= (others => '0');	
 		END IF; -- end falling edge + EN if
 	END PROCESS;
 END behaviour;
