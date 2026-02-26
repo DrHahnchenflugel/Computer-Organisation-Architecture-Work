@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Feb 26 02:47:57 2026
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : lab4a
+Top-level Entity Name : data_mem
+Family : Cyclone IV E
+Total logic elements : 13,961
+    Total combinational functions : 5,769
+    Dedicated logic registers : 8,224
+Total registers : 8224
+Total pins : 75
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

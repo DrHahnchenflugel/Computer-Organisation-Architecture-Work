@@ -1,0 +1,39 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY data_mem IS
+PORT(
+	clk		: IN STD_LOGIC;
+	addr		: IN UNSIGNED(7 DOWNTO 0);
+	data_in	: IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+	wen		: IN STD_LOGIC;
+	en			: IN STD_LOGIC;
+	data_out	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0));
+END data_mem;
+
+ARCHITECTURE Behaviour OF data_mem IS
+	-- memory: 256 words of 32 bits
+	TYPE mem_array IS ARRAY (0 TO 255) OF STD_LOGIC_VECTOR(31 DOWNTO 0);
+
+	-- Signal for memory contents
+	SIGNAL mem : mem_array := (OTHERS => (OTHERS => '0'));
+BEGIN
+	PROCESS(clk)
+	BEGIN
+		IF falling_edge(clk) THEN
+			IF en = '0' THEN
+				data_out <= (OTHERS => '0');
+			ELSE
+				IF wen = '1' THEN
+					-- WRITE
+					mem(to_integer(addr)) <= data_in;
+					data_out <= (OTHERS => '0');
+				ELSE
+					-- READ
+					data_out <= mem(to_integer(addr));
+				END IF;
+			END IF;
+		END IF;
+	END PROCESS;
+END Behaviour;
