@@ -1,0 +1,957 @@
+Simulator report for lab5_qsim
+Thu Mar 19 09:40:14 2026
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 469 nodes    ;
+; Simulation Coverage         ;      21.17 % ;
+; Total Number of Transitions ; 720          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                                             ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                                ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                                 ;               ;
+; Vector input source                                                                        ; Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab5_2/tb/LUI.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                                  ; On            ;
+; Check outputs                                                                              ; Off                                                                                                 ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                                 ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                                          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                                ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                                                                           ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                                                                           ; Transport     ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      21.17 % ;
+; Total nodes checked                                 ; 469          ;
+; Total output ports checked                          ; 444          ;
+; Total output ports with complete 1/0-value coverage ; 94           ;
+; Total output ports with no 1/0-value coverage       ; 347          ;
+; Total output ports with no 1-value coverage         ; 349          ;
+; Total output ports with no 0-value coverage         ; 348          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |Control|ld_A~0                  ; |Control|ld_A~0                  ; out              ;
+; |Control|ld_A~1                  ; |Control|ld_A~1                  ; out              ;
+; |Control|ld_A~2                  ; |Control|ld_A~2                  ; out              ;
+; |Control|ld_A~3                  ; |Control|ld_A~3                  ; out              ;
+; |Control|ld_A~4                  ; |Control|ld_A~4                  ; out              ;
+; |Control|ld_A~5                  ; |Control|ld_A~5                  ; out              ;
+; |Control|ld_A~6                  ; |Control|ld_A~6                  ; out              ;
+; |Control|ld_A~7                  ; |Control|ld_A~7                  ; out              ;
+; |Control|clr_B~11                ; |Control|clr_B~11                ; out              ;
+; |Control|clr_B~12                ; |Control|clr_B~12                ; out              ;
+; |Control|clr_B~13                ; |Control|clr_B~13                ; out              ;
+; |Control|clr_B~14                ; |Control|clr_B~14                ; out              ;
+; |Control|clr_B~15                ; |Control|clr_B~15                ; out              ;
+; |Control|clr_B~16                ; |Control|clr_B~16                ; out              ;
+; |Control|clr_B~17                ; |Control|clr_B~17                ; out              ;
+; |Control|clr_B~18                ; |Control|clr_B~18                ; out              ;
+; |Control|clr_B~19                ; |Control|clr_B~19                ; out              ;
+; |Control|clr_B~20                ; |Control|clr_B~20                ; out              ;
+; |Control|A_MUX~0                 ; |Control|A_MUX~0                 ; out              ;
+; |Control|A_MUX~1                 ; |Control|A_MUX~1                 ; out              ;
+; |Control|A_MUX~2                 ; |Control|A_MUX~2                 ; out              ;
+; |Control|A_MUX~3                 ; |Control|A_MUX~3                 ; out              ;
+; |Control|A_MUX~4                 ; |Control|A_MUX~4                 ; out              ;
+; |Control|A_MUX~5                 ; |Control|A_MUX~5                 ; out              ;
+; |Control|A_MUX~6                 ; |Control|A_MUX~6                 ; out              ;
+; |Control|DATA_Mux~9              ; |Control|DATA_Mux~9              ; out              ;
+; |Control|DATA_Mux~10             ; |Control|DATA_Mux~10             ; out              ;
+; |Control|DATA_Mux~11             ; |Control|DATA_Mux~11             ; out              ;
+; |Control|DATA_Mux~12             ; |Control|DATA_Mux~12             ; out              ;
+; |Control|DATA_Mux~13             ; |Control|DATA_Mux~13             ; out              ;
+; |Control|DATA_Mux~14             ; |Control|DATA_Mux~14             ; out              ;
+; |Control|DATA_Mux~15             ; |Control|DATA_Mux~15             ; out              ;
+; |Control|DATA_Mux~17             ; |Control|DATA_Mux~17             ; out              ;
+; |Control|DATA_Mux~19             ; |Control|DATA_Mux~19             ; out              ;
+; |Control|DATA_Mux~21             ; |Control|DATA_Mux~21             ; out              ;
+; |Control|ALU_op~25               ; |Control|ALU_op~25               ; out              ;
+; |Control|ALU_op~28               ; |Control|ALU_op~28               ; out              ;
+; |Control|ALU_op~31               ; |Control|ALU_op~31               ; out              ;
+; |Control|ALU_op~34               ; |Control|ALU_op~34               ; out              ;
+; |Control|ALU_op~37               ; |Control|ALU_op~37               ; out              ;
+; |Control|ALU_op~40               ; |Control|ALU_op~40               ; out              ;
+; |Control|ALU_op~43               ; |Control|ALU_op~43               ; out              ;
+; |Control|ALU_op~46               ; |Control|ALU_op~46               ; out              ;
+; |Control|ALU_op~49               ; |Control|ALU_op~49               ; out              ;
+; |Control|ALU_op~52               ; |Control|ALU_op~52               ; out              ;
+; |Control|IM_MUX1~0               ; |Control|IM_MUX1~0               ; out              ;
+; |Control|IM_MUX1~1               ; |Control|IM_MUX1~1               ; out              ;
+; |Control|IM_MUX1~2               ; |Control|IM_MUX1~2               ; out              ;
+; |Control|IM_MUX1~3               ; |Control|IM_MUX1~3               ; out              ;
+; |Control|IM_MUX1~4               ; |Control|IM_MUX1~4               ; out              ;
+; |Control|IM_MUX1~5               ; |Control|IM_MUX1~5               ; out              ;
+; |Control|IM_MUX1~6               ; |Control|IM_MUX1~6               ; out              ;
+; |Control|IM_MUX1~7               ; |Control|IM_MUX1~7               ; out              ;
+; |Control|IM_MUX1~8               ; |Control|IM_MUX1~8               ; out              ;
+; |Control|ld_PC~4                 ; |Control|ld_PC~4                 ; out              ;
+; |Control|ld_PC~5                 ; |Control|ld_PC~5                 ; out              ;
+; |Control|inc_PC~27               ; |Control|inc_PC~27               ; out              ;
+; |Control|inc_PC~28               ; |Control|inc_PC~28               ; out              ;
+; |Control|ld_A~8                  ; |Control|ld_A~8                  ; out              ;
+; |Control|ld_A~9                  ; |Control|ld_A~9                  ; out              ;
+; |Control|ld_A~10                 ; |Control|ld_A~10                 ; out              ;
+; |Control|A_MUX~7                 ; |Control|A_MUX~7                 ; out              ;
+; |Control|A_MUX~8                 ; |Control|A_MUX~8                 ; out              ;
+; |Control|A_MUX~9                 ; |Control|A_MUX~9                 ; out              ;
+; |Control|ld_IR~0                 ; |Control|ld_IR~0                 ; out              ;
+; |Control|ld_PC~6                 ; |Control|ld_PC~6                 ; out              ;
+; |Control|inc_PC~29               ; |Control|inc_PC~29               ; out              ;
+; |Control|ld_A~11                 ; |Control|ld_A~11                 ; out              ;
+; |Control|A_MUX~10                ; |Control|A_MUX~10                ; out              ;
+; |Control|present_state~0         ; |Control|present_state~0         ; out              ;
+; |Control|present_state~1         ; |Control|present_state~1         ; out              ;
+; |Control|present_state.state_0   ; |Control|present_state.state_0   ; regout           ;
+; |Control|present_state.state_1   ; |Control|present_state.state_1   ; regout           ;
+; |Control|process_2~0             ; |Control|process_2~0             ; out0             ;
+; |Control|present_state.state_2   ; |Control|present_state.state_2   ; regout           ;
+; |Control|clk                     ; |Control|clk                     ; out              ;
+; |Control|INST[30]                ; |Control|INST[30]                ; out              ;
+; |Control|A_MUX                   ; |Control|A_MUX                   ; pin_out          ;
+; |Control|inc_PC                  ; |Control|inc_PC                  ; pin_out          ;
+; |Control|ld_PC                   ; |Control|ld_PC                   ; pin_out          ;
+; |Control|ld_IR                   ; |Control|ld_IR                   ; pin_out          ;
+; |Control|ld_A                    ; |Control|ld_A                    ; pin_out          ;
+; |Control|T[0]                    ; |Control|T[0]                    ; pin_out          ;
+; |Control|T[1]                    ; |Control|T[1]                    ; pin_out          ;
+; |Control|T[2]                    ; |Control|T[2]                    ; pin_out          ;
+; |Control|present_state~2         ; |Control|present_state~2         ; out0             ;
+; |Control|present_state.state_0~0 ; |Control|present_state.state_0~0 ; out0             ;
+; |Control|DATA_Mux~32             ; |Control|DATA_Mux~32             ; out0             ;
+; |Control|DATA_Mux~34             ; |Control|DATA_Mux~34             ; out0             ;
+; |Control|present_state.state_2~0 ; |Control|present_state.state_2~0 ; out0             ;
+; |Control|DATA_Mux~36             ; |Control|DATA_Mux~36             ; out0             ;
+; |Control|present_state~7         ; |Control|present_state~7         ; out0             ;
+; |Control|Equal7~0                ; |Control|Equal7~0                ; out0             ;
+; |Control|Equal9~0                ; |Control|Equal9~0                ; out0             ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                 ;
++---------------------------+---------------------------+------------------+
+; Node Name                 ; Output Port Name          ; Output Port Type ;
++---------------------------+---------------------------+------------------+
+; |Control|ld_PC~0          ; |Control|ld_PC~0          ; out              ;
+; |Control|ld_PC~1          ; |Control|ld_PC~1          ; out              ;
+; |Control|ld_PC~2          ; |Control|ld_PC~2          ; out              ;
+; |Control|inc_PC~0         ; |Control|inc_PC~0         ; out              ;
+; |Control|inc_PC~1         ; |Control|inc_PC~1         ; out              ;
+; |Control|inc_PC~2         ; |Control|inc_PC~2         ; out              ;
+; |Control|inc_PC~3         ; |Control|inc_PC~3         ; out              ;
+; |Control|inc_PC~4         ; |Control|inc_PC~4         ; out              ;
+; |Control|inc_PC~5         ; |Control|inc_PC~5         ; out              ;
+; |Control|inc_PC~6         ; |Control|inc_PC~6         ; out              ;
+; |Control|inc_PC~7         ; |Control|inc_PC~7         ; out              ;
+; |Control|inc_PC~8         ; |Control|inc_PC~8         ; out              ;
+; |Control|inc_PC~9         ; |Control|inc_PC~9         ; out              ;
+; |Control|inc_PC~10        ; |Control|inc_PC~10        ; out              ;
+; |Control|inc_PC~11        ; |Control|inc_PC~11        ; out              ;
+; |Control|inc_PC~12        ; |Control|inc_PC~12        ; out              ;
+; |Control|inc_PC~13        ; |Control|inc_PC~13        ; out              ;
+; |Control|inc_PC~14        ; |Control|inc_PC~14        ; out              ;
+; |Control|inc_PC~15        ; |Control|inc_PC~15        ; out              ;
+; |Control|inc_PC~16        ; |Control|inc_PC~16        ; out              ;
+; |Control|inc_PC~17        ; |Control|inc_PC~17        ; out              ;
+; |Control|inc_PC~18        ; |Control|inc_PC~18        ; out              ;
+; |Control|inc_PC~19        ; |Control|inc_PC~19        ; out              ;
+; |Control|inc_PC~20        ; |Control|inc_PC~20        ; out              ;
+; |Control|inc_PC~21        ; |Control|inc_PC~21        ; out              ;
+; |Control|inc_PC~22        ; |Control|inc_PC~22        ; out              ;
+; |Control|inc_PC~23        ; |Control|inc_PC~23        ; out              ;
+; |Control|inc_PC~24        ; |Control|inc_PC~24        ; out              ;
+; |Control|inc_PC~25        ; |Control|inc_PC~25        ; out              ;
+; |Control|clr_A~0          ; |Control|clr_A~0          ; out              ;
+; |Control|clr_A~1          ; |Control|clr_A~1          ; out              ;
+; |Control|clr_A~2          ; |Control|clr_A~2          ; out              ;
+; |Control|clr_A~3          ; |Control|clr_A~3          ; out              ;
+; |Control|clr_A~4          ; |Control|clr_A~4          ; out              ;
+; |Control|clr_A~5          ; |Control|clr_A~5          ; out              ;
+; |Control|clr_A~6          ; |Control|clr_A~6          ; out              ;
+; |Control|clr_A~7          ; |Control|clr_A~7          ; out              ;
+; |Control|clr_A~8          ; |Control|clr_A~8          ; out              ;
+; |Control|clr_A~9          ; |Control|clr_A~9          ; out              ;
+; |Control|clr_A~10         ; |Control|clr_A~10         ; out              ;
+; |Control|clr_A~11         ; |Control|clr_A~11         ; out              ;
+; |Control|clr_A~12         ; |Control|clr_A~12         ; out              ;
+; |Control|clr_A~13         ; |Control|clr_A~13         ; out              ;
+; |Control|clr_A~14         ; |Control|clr_A~14         ; out              ;
+; |Control|clr_A~15         ; |Control|clr_A~15         ; out              ;
+; |Control|clr_A~16         ; |Control|clr_A~16         ; out              ;
+; |Control|clr_A~17         ; |Control|clr_A~17         ; out              ;
+; |Control|clr_A~18         ; |Control|clr_A~18         ; out              ;
+; |Control|clr_A~19         ; |Control|clr_A~19         ; out              ;
+; |Control|ld_B~0           ; |Control|ld_B~0           ; out              ;
+; |Control|ld_B~1           ; |Control|ld_B~1           ; out              ;
+; |Control|ld_B~2           ; |Control|ld_B~2           ; out              ;
+; |Control|ld_B~3           ; |Control|ld_B~3           ; out              ;
+; |Control|ld_B~4           ; |Control|ld_B~4           ; out              ;
+; |Control|clr_B~0          ; |Control|clr_B~0          ; out              ;
+; |Control|clr_B~1          ; |Control|clr_B~1          ; out              ;
+; |Control|clr_B~2          ; |Control|clr_B~2          ; out              ;
+; |Control|clr_B~3          ; |Control|clr_B~3          ; out              ;
+; |Control|clr_B~4          ; |Control|clr_B~4          ; out              ;
+; |Control|clr_B~5          ; |Control|clr_B~5          ; out              ;
+; |Control|clr_B~6          ; |Control|clr_B~6          ; out              ;
+; |Control|clr_B~7          ; |Control|clr_B~7          ; out              ;
+; |Control|clr_B~8          ; |Control|clr_B~8          ; out              ;
+; |Control|clr_B~9          ; |Control|clr_B~9          ; out              ;
+; |Control|clr_B~10         ; |Control|clr_B~10         ; out              ;
+; |Control|clr_C~0          ; |Control|clr_C~0          ; out              ;
+; |Control|clr_C~1          ; |Control|clr_C~1          ; out              ;
+; |Control|clr_C~2          ; |Control|clr_C~2          ; out              ;
+; |Control|clr_C~3          ; |Control|clr_C~3          ; out              ;
+; |Control|clr_C~4          ; |Control|clr_C~4          ; out              ;
+; |Control|clr_C~5          ; |Control|clr_C~5          ; out              ;
+; |Control|clr_C~6          ; |Control|clr_C~6          ; out              ;
+; |Control|clr_C~7          ; |Control|clr_C~7          ; out              ;
+; |Control|clr_C~8          ; |Control|clr_C~8          ; out              ;
+; |Control|clr_C~9          ; |Control|clr_C~9          ; out              ;
+; |Control|clr_C~10         ; |Control|clr_C~10         ; out              ;
+; |Control|clr_C~11         ; |Control|clr_C~11         ; out              ;
+; |Control|clr_C~12         ; |Control|clr_C~12         ; out              ;
+; |Control|clr_C~13         ; |Control|clr_C~13         ; out              ;
+; |Control|clr_C~14         ; |Control|clr_C~14         ; out              ;
+; |Control|clr_C~15         ; |Control|clr_C~15         ; out              ;
+; |Control|clr_C~16         ; |Control|clr_C~16         ; out              ;
+; |Control|clr_C~17         ; |Control|clr_C~17         ; out              ;
+; |Control|clr_C~18         ; |Control|clr_C~18         ; out              ;
+; |Control|clr_C~19         ; |Control|clr_C~19         ; out              ;
+; |Control|clr_C~20         ; |Control|clr_C~20         ; out              ;
+; |Control|clr_C~21         ; |Control|clr_C~21         ; out              ;
+; |Control|ld_C~0           ; |Control|ld_C~0           ; out              ;
+; |Control|ld_C~1           ; |Control|ld_C~1           ; out              ;
+; |Control|ld_C~2           ; |Control|ld_C~2           ; out              ;
+; |Control|ld_C~3           ; |Control|ld_C~3           ; out              ;
+; |Control|ld_C~4           ; |Control|ld_C~4           ; out              ;
+; |Control|ld_C~5           ; |Control|ld_C~5           ; out              ;
+; |Control|ld_C~6           ; |Control|ld_C~6           ; out              ;
+; |Control|ld_C~7           ; |Control|ld_C~7           ; out              ;
+; |Control|ld_C~8           ; |Control|ld_C~8           ; out              ;
+; |Control|ld_C~9           ; |Control|ld_C~9           ; out              ;
+; |Control|clr_Z~0          ; |Control|clr_Z~0          ; out              ;
+; |Control|clr_Z~1          ; |Control|clr_Z~1          ; out              ;
+; |Control|clr_Z~2          ; |Control|clr_Z~2          ; out              ;
+; |Control|clr_Z~3          ; |Control|clr_Z~3          ; out              ;
+; |Control|clr_Z~4          ; |Control|clr_Z~4          ; out              ;
+; |Control|clr_Z~5          ; |Control|clr_Z~5          ; out              ;
+; |Control|clr_Z~6          ; |Control|clr_Z~6          ; out              ;
+; |Control|clr_Z~7          ; |Control|clr_Z~7          ; out              ;
+; |Control|clr_Z~8          ; |Control|clr_Z~8          ; out              ;
+; |Control|clr_Z~9          ; |Control|clr_Z~9          ; out              ;
+; |Control|clr_Z~10         ; |Control|clr_Z~10         ; out              ;
+; |Control|clr_Z~11         ; |Control|clr_Z~11         ; out              ;
+; |Control|clr_Z~12         ; |Control|clr_Z~12         ; out              ;
+; |Control|clr_Z~13         ; |Control|clr_Z~13         ; out              ;
+; |Control|clr_Z~14         ; |Control|clr_Z~14         ; out              ;
+; |Control|clr_Z~15         ; |Control|clr_Z~15         ; out              ;
+; |Control|clr_Z~16         ; |Control|clr_Z~16         ; out              ;
+; |Control|clr_Z~17         ; |Control|clr_Z~17         ; out              ;
+; |Control|clr_Z~18         ; |Control|clr_Z~18         ; out              ;
+; |Control|clr_Z~19         ; |Control|clr_Z~19         ; out              ;
+; |Control|clr_Z~20         ; |Control|clr_Z~20         ; out              ;
+; |Control|clr_Z~21         ; |Control|clr_Z~21         ; out              ;
+; |Control|clr_Z~22         ; |Control|clr_Z~22         ; out              ;
+; |Control|DATA_Mux~0       ; |Control|DATA_Mux~0       ; out              ;
+; |Control|DATA_Mux~1       ; |Control|DATA_Mux~1       ; out              ;
+; |Control|DATA_Mux~2       ; |Control|DATA_Mux~2       ; out              ;
+; |Control|DATA_Mux~3       ; |Control|DATA_Mux~3       ; out              ;
+; |Control|DATA_Mux~4       ; |Control|DATA_Mux~4       ; out              ;
+; |Control|DATA_Mux~5       ; |Control|DATA_Mux~5       ; out              ;
+; |Control|DATA_Mux~6       ; |Control|DATA_Mux~6       ; out              ;
+; |Control|DATA_Mux~7       ; |Control|DATA_Mux~7       ; out              ;
+; |Control|DATA_Mux~8       ; |Control|DATA_Mux~8       ; out              ;
+; |Control|DATA_Mux~16      ; |Control|DATA_Mux~16      ; out              ;
+; |Control|DATA_Mux~18      ; |Control|DATA_Mux~18      ; out              ;
+; |Control|DATA_Mux~20      ; |Control|DATA_Mux~20      ; out              ;
+; |Control|DATA_Mux~22      ; |Control|DATA_Mux~22      ; out              ;
+; |Control|B_MUX~0          ; |Control|B_MUX~0          ; out              ;
+; |Control|B_MUX~1          ; |Control|B_MUX~1          ; out              ;
+; |Control|B_MUX~2          ; |Control|B_MUX~2          ; out              ;
+; |Control|B_MUX~3          ; |Control|B_MUX~3          ; out              ;
+; |Control|B_MUX~4          ; |Control|B_MUX~4          ; out              ;
+; |Control|B_MUX~5          ; |Control|B_MUX~5          ; out              ;
+; |Control|B_MUX~6          ; |Control|B_MUX~6          ; out              ;
+; |Control|B_MUX~7          ; |Control|B_MUX~7          ; out              ;
+; |Control|REG_Mux~0        ; |Control|REG_Mux~0        ; out              ;
+; |Control|REG_Mux~1        ; |Control|REG_Mux~1        ; out              ;
+; |Control|REG_Mux~2        ; |Control|REG_Mux~2        ; out              ;
+; |Control|REG_Mux~3        ; |Control|REG_Mux~3        ; out              ;
+; |Control|REG_Mux~4        ; |Control|REG_Mux~4        ; out              ;
+; |Control|REG_Mux~5        ; |Control|REG_Mux~5        ; out              ;
+; |Control|ALU_op~0         ; |Control|ALU_op~0         ; out              ;
+; |Control|ALU_op~1         ; |Control|ALU_op~1         ; out              ;
+; |Control|ALU_op~2         ; |Control|ALU_op~2         ; out              ;
+; |Control|ALU_op~3         ; |Control|ALU_op~3         ; out              ;
+; |Control|ALU_op~4         ; |Control|ALU_op~4         ; out              ;
+; |Control|ALU_op~5         ; |Control|ALU_op~5         ; out              ;
+; |Control|ALU_op~6         ; |Control|ALU_op~6         ; out              ;
+; |Control|ALU_op~7         ; |Control|ALU_op~7         ; out              ;
+; |Control|ALU_op~8         ; |Control|ALU_op~8         ; out              ;
+; |Control|ALU_op~9         ; |Control|ALU_op~9         ; out              ;
+; |Control|ALU_op~10        ; |Control|ALU_op~10        ; out              ;
+; |Control|ALU_op~11        ; |Control|ALU_op~11        ; out              ;
+; |Control|ALU_op~12        ; |Control|ALU_op~12        ; out              ;
+; |Control|ALU_op~13        ; |Control|ALU_op~13        ; out              ;
+; |Control|ALU_op~14        ; |Control|ALU_op~14        ; out              ;
+; |Control|ALU_op~15        ; |Control|ALU_op~15        ; out              ;
+; |Control|ALU_op~16        ; |Control|ALU_op~16        ; out              ;
+; |Control|ALU_op~17        ; |Control|ALU_op~17        ; out              ;
+; |Control|ALU_op~18        ; |Control|ALU_op~18        ; out              ;
+; |Control|ALU_op~19        ; |Control|ALU_op~19        ; out              ;
+; |Control|ALU_op~20        ; |Control|ALU_op~20        ; out              ;
+; |Control|ALU_op~21        ; |Control|ALU_op~21        ; out              ;
+; |Control|ALU_op~22        ; |Control|ALU_op~22        ; out              ;
+; |Control|ALU_op~23        ; |Control|ALU_op~23        ; out              ;
+; |Control|ALU_op~24        ; |Control|ALU_op~24        ; out              ;
+; |Control|ALU_op~26        ; |Control|ALU_op~26        ; out              ;
+; |Control|ALU_op~27        ; |Control|ALU_op~27        ; out              ;
+; |Control|ALU_op~29        ; |Control|ALU_op~29        ; out              ;
+; |Control|ALU_op~30        ; |Control|ALU_op~30        ; out              ;
+; |Control|ALU_op~32        ; |Control|ALU_op~32        ; out              ;
+; |Control|ALU_op~33        ; |Control|ALU_op~33        ; out              ;
+; |Control|ALU_op~35        ; |Control|ALU_op~35        ; out              ;
+; |Control|ALU_op~36        ; |Control|ALU_op~36        ; out              ;
+; |Control|ALU_op~38        ; |Control|ALU_op~38        ; out              ;
+; |Control|ALU_op~39        ; |Control|ALU_op~39        ; out              ;
+; |Control|ALU_op~41        ; |Control|ALU_op~41        ; out              ;
+; |Control|ALU_op~42        ; |Control|ALU_op~42        ; out              ;
+; |Control|ALU_op~44        ; |Control|ALU_op~44        ; out              ;
+; |Control|ALU_op~45        ; |Control|ALU_op~45        ; out              ;
+; |Control|ALU_op~47        ; |Control|ALU_op~47        ; out              ;
+; |Control|ALU_op~48        ; |Control|ALU_op~48        ; out              ;
+; |Control|ALU_op~50        ; |Control|ALU_op~50        ; out              ;
+; |Control|ALU_op~51        ; |Control|ALU_op~51        ; out              ;
+; |Control|IM_MUX2~0        ; |Control|IM_MUX2~0        ; out              ;
+; |Control|IM_MUX2~1        ; |Control|IM_MUX2~1        ; out              ;
+; |Control|IM_MUX2~2        ; |Control|IM_MUX2~2        ; out              ;
+; |Control|IM_MUX2~3        ; |Control|IM_MUX2~3        ; out              ;
+; |Control|IM_MUX2~4        ; |Control|IM_MUX2~4        ; out              ;
+; |Control|IM_MUX2~5        ; |Control|IM_MUX2~5        ; out              ;
+; |Control|IM_MUX2~6        ; |Control|IM_MUX2~6        ; out              ;
+; |Control|IM_MUX2~7        ; |Control|IM_MUX2~7        ; out              ;
+; |Control|IM_MUX2~8        ; |Control|IM_MUX2~8        ; out              ;
+; |Control|IM_MUX2~9        ; |Control|IM_MUX2~9        ; out              ;
+; |Control|IM_MUX2~10       ; |Control|IM_MUX2~10       ; out              ;
+; |Control|IM_MUX2~11       ; |Control|IM_MUX2~11       ; out              ;
+; |Control|IM_MUX2~12       ; |Control|IM_MUX2~12       ; out              ;
+; |Control|IM_MUX2~13       ; |Control|IM_MUX2~13       ; out              ;
+; |Control|IM_MUX2~14       ; |Control|IM_MUX2~14       ; out              ;
+; |Control|IM_MUX2~15       ; |Control|IM_MUX2~15       ; out              ;
+; |Control|IM_MUX2~16       ; |Control|IM_MUX2~16       ; out              ;
+; |Control|IM_MUX2~17       ; |Control|IM_MUX2~17       ; out              ;
+; |Control|IM_MUX2~18       ; |Control|IM_MUX2~18       ; out              ;
+; |Control|IM_MUX2~19       ; |Control|IM_MUX2~19       ; out              ;
+; |Control|IM_MUX2~20       ; |Control|IM_MUX2~20       ; out              ;
+; |Control|IM_MUX2~21       ; |Control|IM_MUX2~21       ; out              ;
+; |Control|IM_MUX2~22       ; |Control|IM_MUX2~22       ; out              ;
+; |Control|IM_MUX2~23       ; |Control|IM_MUX2~23       ; out              ;
+; |Control|IM_MUX2~24       ; |Control|IM_MUX2~24       ; out              ;
+; |Control|IM_MUX2~25       ; |Control|IM_MUX2~25       ; out              ;
+; |Control|IM_MUX2~26       ; |Control|IM_MUX2~26       ; out              ;
+; |Control|IM_MUX2~27       ; |Control|IM_MUX2~27       ; out              ;
+; |Control|IM_MUX2~28       ; |Control|IM_MUX2~28       ; out              ;
+; |Control|IM_MUX2~29       ; |Control|IM_MUX2~29       ; out              ;
+; |Control|IM_MUX2~30       ; |Control|IM_MUX2~30       ; out              ;
+; |Control|DATA_Mux~23      ; |Control|DATA_Mux~23      ; out              ;
+; |Control|DATA_Mux~24      ; |Control|DATA_Mux~24      ; out              ;
+; |Control|DATA_Mux~25      ; |Control|DATA_Mux~25      ; out              ;
+; |Control|DATA_Mux~26      ; |Control|DATA_Mux~26      ; out              ;
+; |Control|DATA_Mux~27      ; |Control|DATA_Mux~27      ; out              ;
+; |Control|DATA_Mux~28      ; |Control|DATA_Mux~28      ; out              ;
+; |Control|ld_PC~3          ; |Control|ld_PC~3          ; out              ;
+; |Control|inc_PC~26        ; |Control|inc_PC~26        ; out              ;
+; |Control|clr_A~20         ; |Control|clr_A~20         ; out              ;
+; |Control|clr_A~21         ; |Control|clr_A~21         ; out              ;
+; |Control|clr_A~22         ; |Control|clr_A~22         ; out              ;
+; |Control|ld_B~5           ; |Control|ld_B~5           ; out              ;
+; |Control|ld_B~6           ; |Control|ld_B~6           ; out              ;
+; |Control|ld_B~7           ; |Control|ld_B~7           ; out              ;
+; |Control|clr_B~21         ; |Control|clr_B~21         ; out              ;
+; |Control|clr_B~22         ; |Control|clr_B~22         ; out              ;
+; |Control|clr_B~23         ; |Control|clr_B~23         ; out              ;
+; |Control|clr_C~22         ; |Control|clr_C~22         ; out              ;
+; |Control|clr_C~23         ; |Control|clr_C~23         ; out              ;
+; |Control|clr_C~24         ; |Control|clr_C~24         ; out              ;
+; |Control|ld_C~10          ; |Control|ld_C~10          ; out              ;
+; |Control|ld_C~11          ; |Control|ld_C~11          ; out              ;
+; |Control|ld_C~12          ; |Control|ld_C~12          ; out              ;
+; |Control|clr_Z~23         ; |Control|clr_Z~23         ; out              ;
+; |Control|clr_Z~24         ; |Control|clr_Z~24         ; out              ;
+; |Control|clr_Z~25         ; |Control|clr_Z~25         ; out              ;
+; |Control|B_MUX~8          ; |Control|B_MUX~8          ; out              ;
+; |Control|B_MUX~9          ; |Control|B_MUX~9          ; out              ;
+; |Control|B_MUX~10         ; |Control|B_MUX~10         ; out              ;
+; |Control|REG_Mux~6        ; |Control|REG_Mux~6        ; out              ;
+; |Control|REG_Mux~7        ; |Control|REG_Mux~7        ; out              ;
+; |Control|REG_Mux~8        ; |Control|REG_Mux~8        ; out              ;
+; |Control|ALU_op~53        ; |Control|ALU_op~53        ; out              ;
+; |Control|ALU_op~54        ; |Control|ALU_op~54        ; out              ;
+; |Control|ALU_op~55        ; |Control|ALU_op~55        ; out              ;
+; |Control|ALU_op~56        ; |Control|ALU_op~56        ; out              ;
+; |Control|ALU_op~57        ; |Control|ALU_op~57        ; out              ;
+; |Control|ALU_op~58        ; |Control|ALU_op~58        ; out              ;
+; |Control|ALU_op~59        ; |Control|ALU_op~59        ; out              ;
+; |Control|ALU_op~60        ; |Control|ALU_op~60        ; out              ;
+; |Control|ALU_op~61        ; |Control|ALU_op~61        ; out              ;
+; |Control|IM_MUX1~9        ; |Control|IM_MUX1~9        ; out              ;
+; |Control|IM_MUX1~10       ; |Control|IM_MUX1~10       ; out              ;
+; |Control|IM_MUX1~11       ; |Control|IM_MUX1~11       ; out              ;
+; |Control|IM_MUX2~31       ; |Control|IM_MUX2~31       ; out              ;
+; |Control|IM_MUX2~32       ; |Control|IM_MUX2~32       ; out              ;
+; |Control|IM_MUX2~33       ; |Control|IM_MUX2~33       ; out              ;
+; |Control|IM_MUX2~34       ; |Control|IM_MUX2~34       ; out              ;
+; |Control|IM_MUX2~35       ; |Control|IM_MUX2~35       ; out              ;
+; |Control|IM_MUX2~36       ; |Control|IM_MUX2~36       ; out              ;
+; |Control|DATA_Mux~29      ; |Control|DATA_Mux~29      ; out              ;
+; |Control|DATA_Mux~30      ; |Control|DATA_Mux~30      ; out              ;
+; |Control|clr_A~23         ; |Control|clr_A~23         ; out              ;
+; |Control|ld_B~8           ; |Control|ld_B~8           ; out              ;
+; |Control|clr_B~24         ; |Control|clr_B~24         ; out              ;
+; |Control|clr_C~25         ; |Control|clr_C~25         ; out              ;
+; |Control|ld_C~13          ; |Control|ld_C~13          ; out              ;
+; |Control|clr_Z~26         ; |Control|clr_Z~26         ; out              ;
+; |Control|ld_Z~0           ; |Control|ld_Z~0           ; out              ;
+; |Control|B_MUX~11         ; |Control|B_MUX~11         ; out              ;
+; |Control|REG_Mux~9        ; |Control|REG_Mux~9        ; out              ;
+; |Control|ALU_op~62        ; |Control|ALU_op~62        ; out              ;
+; |Control|ALU_op~63        ; |Control|ALU_op~63        ; out              ;
+; |Control|ALU_op~64        ; |Control|ALU_op~64        ; out              ;
+; |Control|IM_MUX1~12       ; |Control|IM_MUX1~12       ; out              ;
+; |Control|IM_MUX2~37       ; |Control|IM_MUX2~37       ; out              ;
+; |Control|IM_MUX2~38       ; |Control|IM_MUX2~38       ; out              ;
+; |Control|process_2~1      ; |Control|process_2~1      ; out0             ;
+; |Control|process_2~2      ; |Control|process_2~2      ; out0             ;
+; |Control|en~0             ; |Control|en~0             ; out              ;
+; |Control|wen~0            ; |Control|wen~0            ; out              ;
+; |Control|en~1             ; |Control|en~1             ; out              ;
+; |Control|wen~1            ; |Control|wen~1            ; out              ;
+; |Control|statusC          ; |Control|statusC          ; out              ;
+; |Control|statusZ          ; |Control|statusZ          ; out              ;
+; |Control|INST[24]         ; |Control|INST[24]         ; out              ;
+; |Control|INST[25]         ; |Control|INST[25]         ; out              ;
+; |Control|INST[26]         ; |Control|INST[26]         ; out              ;
+; |Control|INST[27]         ; |Control|INST[27]         ; out              ;
+; |Control|INST[28]         ; |Control|INST[28]         ; out              ;
+; |Control|INST[29]         ; |Control|INST[29]         ; out              ;
+; |Control|INST[31]         ; |Control|INST[31]         ; out              ;
+; |Control|B_MUX            ; |Control|B_MUX            ; pin_out          ;
+; |Control|IM_MUX1          ; |Control|IM_MUX1          ; pin_out          ;
+; |Control|REG_Mux          ; |Control|REG_Mux          ; pin_out          ;
+; |Control|IM_MUX2[0]       ; |Control|IM_MUX2[0]       ; pin_out          ;
+; |Control|IM_MUX2[1]       ; |Control|IM_MUX2[1]       ; pin_out          ;
+; |Control|DATA_Mux[0]      ; |Control|DATA_Mux[0]      ; pin_out          ;
+; |Control|DATA_Mux[1]      ; |Control|DATA_Mux[1]      ; pin_out          ;
+; |Control|ALU_op[0]        ; |Control|ALU_op[0]        ; pin_out          ;
+; |Control|ALU_op[1]        ; |Control|ALU_op[1]        ; pin_out          ;
+; |Control|ALU_op[2]        ; |Control|ALU_op[2]        ; pin_out          ;
+; |Control|clr_IR           ; |Control|clr_IR           ; pin_out          ;
+; |Control|clr_A            ; |Control|clr_A            ; pin_out          ;
+; |Control|clr_B            ; |Control|clr_B            ; pin_out          ;
+; |Control|clr_C            ; |Control|clr_C            ; pin_out          ;
+; |Control|clr_Z            ; |Control|clr_Z            ; pin_out          ;
+; |Control|ld_B             ; |Control|ld_B             ; pin_out          ;
+; |Control|ld_C             ; |Control|ld_C             ; pin_out          ;
+; |Control|ld_Z             ; |Control|ld_Z             ; pin_out          ;
+; |Control|wen              ; |Control|wen              ; pin_out          ;
+; |Control|en               ; |Control|en               ; pin_out          ;
+; |Control|present_state~3  ; |Control|present_state~3  ; out0             ;
+; |Control|present_state~11 ; |Control|present_state~11 ; out0             ;
+; |Control|Equal0~0         ; |Control|Equal0~0         ; out0             ;
+; |Control|Equal1~0         ; |Control|Equal1~0         ; out0             ;
+; |Control|Equal2~0         ; |Control|Equal2~0         ; out0             ;
+; |Control|Equal3~0         ; |Control|Equal3~0         ; out0             ;
+; |Control|Equal4~0         ; |Control|Equal4~0         ; out0             ;
+; |Control|Equal5~0         ; |Control|Equal5~0         ; out0             ;
+; |Control|Equal6~0         ; |Control|Equal6~0         ; out0             ;
+; |Control|Equal8~0         ; |Control|Equal8~0         ; out0             ;
+; |Control|Equal10~0        ; |Control|Equal10~0        ; out0             ;
+; |Control|Equal11~0        ; |Control|Equal11~0        ; out0             ;
+; |Control|Equal12~0        ; |Control|Equal12~0        ; out0             ;
+; |Control|Equal13~0        ; |Control|Equal13~0        ; out0             ;
+; |Control|Equal14~0        ; |Control|Equal14~0        ; out0             ;
+; |Control|Equal15~0        ; |Control|Equal15~0        ; out0             ;
+; |Control|Equal16~0        ; |Control|Equal16~0        ; out0             ;
+; |Control|Equal17~0        ; |Control|Equal17~0        ; out0             ;
+; |Control|Equal18~0        ; |Control|Equal18~0        ; out0             ;
+; |Control|Equal19~0        ; |Control|Equal19~0        ; out0             ;
+; |Control|Equal20~0        ; |Control|Equal20~0        ; out0             ;
+; |Control|Equal21~0        ; |Control|Equal21~0        ; out0             ;
+; |Control|Equal22~0        ; |Control|Equal22~0        ; out0             ;
+; |Control|Equal23~0        ; |Control|Equal23~0        ; out0             ;
+; |Control|Equal24~0        ; |Control|Equal24~0        ; out0             ;
+; |Control|Equal25~0        ; |Control|Equal25~0        ; out0             ;
++---------------------------+---------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------+
+; Missing 0-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |Control|ld_PC~0     ; |Control|ld_PC~0     ; out              ;
+; |Control|ld_PC~1     ; |Control|ld_PC~1     ; out              ;
+; |Control|ld_PC~2     ; |Control|ld_PC~2     ; out              ;
+; |Control|inc_PC~0    ; |Control|inc_PC~0    ; out              ;
+; |Control|inc_PC~1    ; |Control|inc_PC~1    ; out              ;
+; |Control|inc_PC~2    ; |Control|inc_PC~2    ; out              ;
+; |Control|inc_PC~3    ; |Control|inc_PC~3    ; out              ;
+; |Control|inc_PC~4    ; |Control|inc_PC~4    ; out              ;
+; |Control|inc_PC~5    ; |Control|inc_PC~5    ; out              ;
+; |Control|inc_PC~6    ; |Control|inc_PC~6    ; out              ;
+; |Control|inc_PC~7    ; |Control|inc_PC~7    ; out              ;
+; |Control|inc_PC~8    ; |Control|inc_PC~8    ; out              ;
+; |Control|inc_PC~9    ; |Control|inc_PC~9    ; out              ;
+; |Control|inc_PC~10   ; |Control|inc_PC~10   ; out              ;
+; |Control|inc_PC~11   ; |Control|inc_PC~11   ; out              ;
+; |Control|inc_PC~12   ; |Control|inc_PC~12   ; out              ;
+; |Control|inc_PC~13   ; |Control|inc_PC~13   ; out              ;
+; |Control|inc_PC~14   ; |Control|inc_PC~14   ; out              ;
+; |Control|inc_PC~15   ; |Control|inc_PC~15   ; out              ;
+; |Control|inc_PC~16   ; |Control|inc_PC~16   ; out              ;
+; |Control|inc_PC~17   ; |Control|inc_PC~17   ; out              ;
+; |Control|inc_PC~18   ; |Control|inc_PC~18   ; out              ;
+; |Control|inc_PC~19   ; |Control|inc_PC~19   ; out              ;
+; |Control|inc_PC~20   ; |Control|inc_PC~20   ; out              ;
+; |Control|inc_PC~21   ; |Control|inc_PC~21   ; out              ;
+; |Control|inc_PC~22   ; |Control|inc_PC~22   ; out              ;
+; |Control|inc_PC~23   ; |Control|inc_PC~23   ; out              ;
+; |Control|inc_PC~24   ; |Control|inc_PC~24   ; out              ;
+; |Control|inc_PC~25   ; |Control|inc_PC~25   ; out              ;
+; |Control|clr_A~0     ; |Control|clr_A~0     ; out              ;
+; |Control|clr_A~1     ; |Control|clr_A~1     ; out              ;
+; |Control|clr_A~2     ; |Control|clr_A~2     ; out              ;
+; |Control|clr_A~3     ; |Control|clr_A~3     ; out              ;
+; |Control|clr_A~4     ; |Control|clr_A~4     ; out              ;
+; |Control|clr_A~5     ; |Control|clr_A~5     ; out              ;
+; |Control|clr_A~6     ; |Control|clr_A~6     ; out              ;
+; |Control|clr_A~7     ; |Control|clr_A~7     ; out              ;
+; |Control|clr_A~8     ; |Control|clr_A~8     ; out              ;
+; |Control|clr_A~9     ; |Control|clr_A~9     ; out              ;
+; |Control|clr_A~10    ; |Control|clr_A~10    ; out              ;
+; |Control|clr_A~11    ; |Control|clr_A~11    ; out              ;
+; |Control|clr_A~12    ; |Control|clr_A~12    ; out              ;
+; |Control|clr_A~13    ; |Control|clr_A~13    ; out              ;
+; |Control|clr_A~14    ; |Control|clr_A~14    ; out              ;
+; |Control|clr_A~15    ; |Control|clr_A~15    ; out              ;
+; |Control|clr_A~16    ; |Control|clr_A~16    ; out              ;
+; |Control|clr_A~17    ; |Control|clr_A~17    ; out              ;
+; |Control|clr_A~18    ; |Control|clr_A~18    ; out              ;
+; |Control|clr_A~19    ; |Control|clr_A~19    ; out              ;
+; |Control|ld_B~0      ; |Control|ld_B~0      ; out              ;
+; |Control|ld_B~1      ; |Control|ld_B~1      ; out              ;
+; |Control|ld_B~2      ; |Control|ld_B~2      ; out              ;
+; |Control|ld_B~3      ; |Control|ld_B~3      ; out              ;
+; |Control|ld_B~4      ; |Control|ld_B~4      ; out              ;
+; |Control|clr_B~0     ; |Control|clr_B~0     ; out              ;
+; |Control|clr_B~1     ; |Control|clr_B~1     ; out              ;
+; |Control|clr_B~2     ; |Control|clr_B~2     ; out              ;
+; |Control|clr_B~3     ; |Control|clr_B~3     ; out              ;
+; |Control|clr_B~4     ; |Control|clr_B~4     ; out              ;
+; |Control|clr_B~5     ; |Control|clr_B~5     ; out              ;
+; |Control|clr_B~6     ; |Control|clr_B~6     ; out              ;
+; |Control|clr_B~7     ; |Control|clr_B~7     ; out              ;
+; |Control|clr_B~8     ; |Control|clr_B~8     ; out              ;
+; |Control|clr_B~9     ; |Control|clr_B~9     ; out              ;
+; |Control|clr_B~10    ; |Control|clr_B~10    ; out              ;
+; |Control|clr_C~0     ; |Control|clr_C~0     ; out              ;
+; |Control|clr_C~1     ; |Control|clr_C~1     ; out              ;
+; |Control|clr_C~2     ; |Control|clr_C~2     ; out              ;
+; |Control|clr_C~3     ; |Control|clr_C~3     ; out              ;
+; |Control|clr_C~4     ; |Control|clr_C~4     ; out              ;
+; |Control|clr_C~5     ; |Control|clr_C~5     ; out              ;
+; |Control|clr_C~6     ; |Control|clr_C~6     ; out              ;
+; |Control|clr_C~7     ; |Control|clr_C~7     ; out              ;
+; |Control|clr_C~8     ; |Control|clr_C~8     ; out              ;
+; |Control|clr_C~9     ; |Control|clr_C~9     ; out              ;
+; |Control|clr_C~10    ; |Control|clr_C~10    ; out              ;
+; |Control|clr_C~11    ; |Control|clr_C~11    ; out              ;
+; |Control|clr_C~12    ; |Control|clr_C~12    ; out              ;
+; |Control|clr_C~13    ; |Control|clr_C~13    ; out              ;
+; |Control|clr_C~14    ; |Control|clr_C~14    ; out              ;
+; |Control|clr_C~15    ; |Control|clr_C~15    ; out              ;
+; |Control|clr_C~16    ; |Control|clr_C~16    ; out              ;
+; |Control|clr_C~17    ; |Control|clr_C~17    ; out              ;
+; |Control|clr_C~18    ; |Control|clr_C~18    ; out              ;
+; |Control|clr_C~19    ; |Control|clr_C~19    ; out              ;
+; |Control|clr_C~20    ; |Control|clr_C~20    ; out              ;
+; |Control|clr_C~21    ; |Control|clr_C~21    ; out              ;
+; |Control|ld_C~0      ; |Control|ld_C~0      ; out              ;
+; |Control|ld_C~1      ; |Control|ld_C~1      ; out              ;
+; |Control|ld_C~2      ; |Control|ld_C~2      ; out              ;
+; |Control|ld_C~3      ; |Control|ld_C~3      ; out              ;
+; |Control|ld_C~4      ; |Control|ld_C~4      ; out              ;
+; |Control|ld_C~5      ; |Control|ld_C~5      ; out              ;
+; |Control|ld_C~6      ; |Control|ld_C~6      ; out              ;
+; |Control|ld_C~7      ; |Control|ld_C~7      ; out              ;
+; |Control|ld_C~8      ; |Control|ld_C~8      ; out              ;
+; |Control|ld_C~9      ; |Control|ld_C~9      ; out              ;
+; |Control|clr_Z~0     ; |Control|clr_Z~0     ; out              ;
+; |Control|clr_Z~1     ; |Control|clr_Z~1     ; out              ;
+; |Control|clr_Z~2     ; |Control|clr_Z~2     ; out              ;
+; |Control|clr_Z~3     ; |Control|clr_Z~3     ; out              ;
+; |Control|clr_Z~4     ; |Control|clr_Z~4     ; out              ;
+; |Control|clr_Z~5     ; |Control|clr_Z~5     ; out              ;
+; |Control|clr_Z~6     ; |Control|clr_Z~6     ; out              ;
+; |Control|clr_Z~7     ; |Control|clr_Z~7     ; out              ;
+; |Control|clr_Z~8     ; |Control|clr_Z~8     ; out              ;
+; |Control|clr_Z~9     ; |Control|clr_Z~9     ; out              ;
+; |Control|clr_Z~10    ; |Control|clr_Z~10    ; out              ;
+; |Control|clr_Z~11    ; |Control|clr_Z~11    ; out              ;
+; |Control|clr_Z~12    ; |Control|clr_Z~12    ; out              ;
+; |Control|clr_Z~13    ; |Control|clr_Z~13    ; out              ;
+; |Control|clr_Z~14    ; |Control|clr_Z~14    ; out              ;
+; |Control|clr_Z~15    ; |Control|clr_Z~15    ; out              ;
+; |Control|clr_Z~16    ; |Control|clr_Z~16    ; out              ;
+; |Control|clr_Z~17    ; |Control|clr_Z~17    ; out              ;
+; |Control|clr_Z~18    ; |Control|clr_Z~18    ; out              ;
+; |Control|clr_Z~19    ; |Control|clr_Z~19    ; out              ;
+; |Control|clr_Z~20    ; |Control|clr_Z~20    ; out              ;
+; |Control|clr_Z~21    ; |Control|clr_Z~21    ; out              ;
+; |Control|clr_Z~22    ; |Control|clr_Z~22    ; out              ;
+; |Control|DATA_Mux~0  ; |Control|DATA_Mux~0  ; out              ;
+; |Control|DATA_Mux~1  ; |Control|DATA_Mux~1  ; out              ;
+; |Control|DATA_Mux~2  ; |Control|DATA_Mux~2  ; out              ;
+; |Control|DATA_Mux~3  ; |Control|DATA_Mux~3  ; out              ;
+; |Control|DATA_Mux~4  ; |Control|DATA_Mux~4  ; out              ;
+; |Control|DATA_Mux~5  ; |Control|DATA_Mux~5  ; out              ;
+; |Control|DATA_Mux~6  ; |Control|DATA_Mux~6  ; out              ;
+; |Control|DATA_Mux~7  ; |Control|DATA_Mux~7  ; out              ;
+; |Control|DATA_Mux~8  ; |Control|DATA_Mux~8  ; out              ;
+; |Control|DATA_Mux~16 ; |Control|DATA_Mux~16 ; out              ;
+; |Control|DATA_Mux~18 ; |Control|DATA_Mux~18 ; out              ;
+; |Control|DATA_Mux~20 ; |Control|DATA_Mux~20 ; out              ;
+; |Control|DATA_Mux~22 ; |Control|DATA_Mux~22 ; out              ;
+; |Control|B_MUX~0     ; |Control|B_MUX~0     ; out              ;
+; |Control|B_MUX~1     ; |Control|B_MUX~1     ; out              ;
+; |Control|B_MUX~2     ; |Control|B_MUX~2     ; out              ;
+; |Control|B_MUX~3     ; |Control|B_MUX~3     ; out              ;
+; |Control|B_MUX~4     ; |Control|B_MUX~4     ; out              ;
+; |Control|B_MUX~5     ; |Control|B_MUX~5     ; out              ;
+; |Control|B_MUX~6     ; |Control|B_MUX~6     ; out              ;
+; |Control|B_MUX~7     ; |Control|B_MUX~7     ; out              ;
+; |Control|REG_Mux~0   ; |Control|REG_Mux~0   ; out              ;
+; |Control|REG_Mux~1   ; |Control|REG_Mux~1   ; out              ;
+; |Control|REG_Mux~2   ; |Control|REG_Mux~2   ; out              ;
+; |Control|REG_Mux~3   ; |Control|REG_Mux~3   ; out              ;
+; |Control|REG_Mux~4   ; |Control|REG_Mux~4   ; out              ;
+; |Control|REG_Mux~5   ; |Control|REG_Mux~5   ; out              ;
+; |Control|ALU_op~0    ; |Control|ALU_op~0    ; out              ;
+; |Control|ALU_op~1    ; |Control|ALU_op~1    ; out              ;
+; |Control|ALU_op~2    ; |Control|ALU_op~2    ; out              ;
+; |Control|ALU_op~3    ; |Control|ALU_op~3    ; out              ;
+; |Control|ALU_op~4    ; |Control|ALU_op~4    ; out              ;
+; |Control|ALU_op~5    ; |Control|ALU_op~5    ; out              ;
+; |Control|ALU_op~6    ; |Control|ALU_op~6    ; out              ;
+; |Control|ALU_op~7    ; |Control|ALU_op~7    ; out              ;
+; |Control|ALU_op~8    ; |Control|ALU_op~8    ; out              ;
+; |Control|ALU_op~9    ; |Control|ALU_op~9    ; out              ;
+; |Control|ALU_op~10   ; |Control|ALU_op~10   ; out              ;
+; |Control|ALU_op~11   ; |Control|ALU_op~11   ; out              ;
+; |Control|ALU_op~12   ; |Control|ALU_op~12   ; out              ;
+; |Control|ALU_op~13   ; |Control|ALU_op~13   ; out              ;
+; |Control|ALU_op~14   ; |Control|ALU_op~14   ; out              ;
+; |Control|ALU_op~15   ; |Control|ALU_op~15   ; out              ;
+; |Control|ALU_op~16   ; |Control|ALU_op~16   ; out              ;
+; |Control|ALU_op~17   ; |Control|ALU_op~17   ; out              ;
+; |Control|ALU_op~18   ; |Control|ALU_op~18   ; out              ;
+; |Control|ALU_op~19   ; |Control|ALU_op~19   ; out              ;
+; |Control|ALU_op~20   ; |Control|ALU_op~20   ; out              ;
+; |Control|ALU_op~21   ; |Control|ALU_op~21   ; out              ;
+; |Control|ALU_op~22   ; |Control|ALU_op~22   ; out              ;
+; |Control|ALU_op~23   ; |Control|ALU_op~23   ; out              ;
+; |Control|ALU_op~24   ; |Control|ALU_op~24   ; out              ;
+; |Control|ALU_op~26   ; |Control|ALU_op~26   ; out              ;
+; |Control|ALU_op~27   ; |Control|ALU_op~27   ; out              ;
+; |Control|ALU_op~29   ; |Control|ALU_op~29   ; out              ;
+; |Control|ALU_op~30   ; |Control|ALU_op~30   ; out              ;
+; |Control|ALU_op~32   ; |Control|ALU_op~32   ; out              ;
+; |Control|ALU_op~33   ; |Control|ALU_op~33   ; out              ;
+; |Control|ALU_op~35   ; |Control|ALU_op~35   ; out              ;
+; |Control|ALU_op~36   ; |Control|ALU_op~36   ; out              ;
+; |Control|ALU_op~38   ; |Control|ALU_op~38   ; out              ;
+; |Control|ALU_op~39   ; |Control|ALU_op~39   ; out              ;
+; |Control|ALU_op~41   ; |Control|ALU_op~41   ; out              ;
+; |Control|ALU_op~42   ; |Control|ALU_op~42   ; out              ;
+; |Control|ALU_op~44   ; |Control|ALU_op~44   ; out              ;
+; |Control|ALU_op~45   ; |Control|ALU_op~45   ; out              ;
+; |Control|ALU_op~47   ; |Control|ALU_op~47   ; out              ;
+; |Control|ALU_op~48   ; |Control|ALU_op~48   ; out              ;
+; |Control|ALU_op~50   ; |Control|ALU_op~50   ; out              ;
+; |Control|ALU_op~51   ; |Control|ALU_op~51   ; out              ;
+; |Control|IM_MUX2~0   ; |Control|IM_MUX2~0   ; out              ;
+; |Control|IM_MUX2~1   ; |Control|IM_MUX2~1   ; out              ;
+; |Control|IM_MUX2~2   ; |Control|IM_MUX2~2   ; out              ;
+; |Control|IM_MUX2~3   ; |Control|IM_MUX2~3   ; out              ;
+; |Control|IM_MUX2~4   ; |Control|IM_MUX2~4   ; out              ;
+; |Control|IM_MUX2~5   ; |Control|IM_MUX2~5   ; out              ;
+; |Control|IM_MUX2~6   ; |Control|IM_MUX2~6   ; out              ;
+; |Control|IM_MUX2~7   ; |Control|IM_MUX2~7   ; out              ;
+; |Control|IM_MUX2~8   ; |Control|IM_MUX2~8   ; out              ;
+; |Control|IM_MUX2~9   ; |Control|IM_MUX2~9   ; out              ;
+; |Control|IM_MUX2~10  ; |Control|IM_MUX2~10  ; out              ;
+; |Control|IM_MUX2~11  ; |Control|IM_MUX2~11  ; out              ;
+; |Control|IM_MUX2~12  ; |Control|IM_MUX2~12  ; out              ;
+; |Control|IM_MUX2~13  ; |Control|IM_MUX2~13  ; out              ;
+; |Control|IM_MUX2~14  ; |Control|IM_MUX2~14  ; out              ;
+; |Control|IM_MUX2~15  ; |Control|IM_MUX2~15  ; out              ;
+; |Control|IM_MUX2~16  ; |Control|IM_MUX2~16  ; out              ;
+; |Control|IM_MUX2~17  ; |Control|IM_MUX2~17  ; out              ;
+; |Control|IM_MUX2~18  ; |Control|IM_MUX2~18  ; out              ;
+; |Control|IM_MUX2~19  ; |Control|IM_MUX2~19  ; out              ;
+; |Control|IM_MUX2~20  ; |Control|IM_MUX2~20  ; out              ;
+; |Control|IM_MUX2~21  ; |Control|IM_MUX2~21  ; out              ;
+; |Control|IM_MUX2~22  ; |Control|IM_MUX2~22  ; out              ;
+; |Control|IM_MUX2~23  ; |Control|IM_MUX2~23  ; out              ;
+; |Control|IM_MUX2~24  ; |Control|IM_MUX2~24  ; out              ;
+; |Control|IM_MUX2~25  ; |Control|IM_MUX2~25  ; out              ;
+; |Control|IM_MUX2~26  ; |Control|IM_MUX2~26  ; out              ;
+; |Control|IM_MUX2~27  ; |Control|IM_MUX2~27  ; out              ;
+; |Control|IM_MUX2~28  ; |Control|IM_MUX2~28  ; out              ;
+; |Control|IM_MUX2~29  ; |Control|IM_MUX2~29  ; out              ;
+; |Control|IM_MUX2~30  ; |Control|IM_MUX2~30  ; out              ;
+; |Control|DATA_Mux~23 ; |Control|DATA_Mux~23 ; out              ;
+; |Control|DATA_Mux~24 ; |Control|DATA_Mux~24 ; out              ;
+; |Control|DATA_Mux~25 ; |Control|DATA_Mux~25 ; out              ;
+; |Control|DATA_Mux~26 ; |Control|DATA_Mux~26 ; out              ;
+; |Control|DATA_Mux~27 ; |Control|DATA_Mux~27 ; out              ;
+; |Control|DATA_Mux~28 ; |Control|DATA_Mux~28 ; out              ;
+; |Control|ld_PC~3     ; |Control|ld_PC~3     ; out              ;
+; |Control|inc_PC~26   ; |Control|inc_PC~26   ; out              ;
+; |Control|clr_A~20    ; |Control|clr_A~20    ; out              ;
+; |Control|clr_A~21    ; |Control|clr_A~21    ; out              ;
+; |Control|clr_A~22    ; |Control|clr_A~22    ; out              ;
+; |Control|ld_B~5      ; |Control|ld_B~5      ; out              ;
+; |Control|ld_B~6      ; |Control|ld_B~6      ; out              ;
+; |Control|ld_B~7      ; |Control|ld_B~7      ; out              ;
+; |Control|clr_B~21    ; |Control|clr_B~21    ; out              ;
+; |Control|clr_B~22    ; |Control|clr_B~22    ; out              ;
+; |Control|clr_B~23    ; |Control|clr_B~23    ; out              ;
+; |Control|clr_C~22    ; |Control|clr_C~22    ; out              ;
+; |Control|clr_C~23    ; |Control|clr_C~23    ; out              ;
+; |Control|clr_C~24    ; |Control|clr_C~24    ; out              ;
+; |Control|ld_C~10     ; |Control|ld_C~10     ; out              ;
+; |Control|ld_C~11     ; |Control|ld_C~11     ; out              ;
+; |Control|ld_C~12     ; |Control|ld_C~12     ; out              ;
+; |Control|clr_Z~23    ; |Control|clr_Z~23    ; out              ;
+; |Control|clr_Z~24    ; |Control|clr_Z~24    ; out              ;
+; |Control|clr_Z~25    ; |Control|clr_Z~25    ; out              ;
+; |Control|B_MUX~8     ; |Control|B_MUX~8     ; out              ;
+; |Control|B_MUX~9     ; |Control|B_MUX~9     ; out              ;
+; |Control|B_MUX~10    ; |Control|B_MUX~10    ; out              ;
+; |Control|REG_Mux~6   ; |Control|REG_Mux~6   ; out              ;
+; |Control|REG_Mux~7   ; |Control|REG_Mux~7   ; out              ;
+; |Control|REG_Mux~8   ; |Control|REG_Mux~8   ; out              ;
+; |Control|ALU_op~53   ; |Control|ALU_op~53   ; out              ;
+; |Control|ALU_op~54   ; |Control|ALU_op~54   ; out              ;
+; |Control|ALU_op~55   ; |Control|ALU_op~55   ; out              ;
+; |Control|ALU_op~56   ; |Control|ALU_op~56   ; out              ;
+; |Control|ALU_op~57   ; |Control|ALU_op~57   ; out              ;
+; |Control|ALU_op~58   ; |Control|ALU_op~58   ; out              ;
+; |Control|ALU_op~59   ; |Control|ALU_op~59   ; out              ;
+; |Control|ALU_op~60   ; |Control|ALU_op~60   ; out              ;
+; |Control|ALU_op~61   ; |Control|ALU_op~61   ; out              ;
+; |Control|IM_MUX1~9   ; |Control|IM_MUX1~9   ; out              ;
+; |Control|IM_MUX1~10  ; |Control|IM_MUX1~10  ; out              ;
+; |Control|IM_MUX1~11  ; |Control|IM_MUX1~11  ; out              ;
+; |Control|IM_MUX2~31  ; |Control|IM_MUX2~31  ; out              ;
+; |Control|IM_MUX2~32  ; |Control|IM_MUX2~32  ; out              ;
+; |Control|IM_MUX2~33  ; |Control|IM_MUX2~33  ; out              ;
+; |Control|IM_MUX2~34  ; |Control|IM_MUX2~34  ; out              ;
+; |Control|IM_MUX2~35  ; |Control|IM_MUX2~35  ; out              ;
+; |Control|IM_MUX2~36  ; |Control|IM_MUX2~36  ; out              ;
+; |Control|DATA_Mux~29 ; |Control|DATA_Mux~29 ; out              ;
+; |Control|DATA_Mux~30 ; |Control|DATA_Mux~30 ; out              ;
+; |Control|clr_A~23    ; |Control|clr_A~23    ; out              ;
+; |Control|ld_B~8      ; |Control|ld_B~8      ; out              ;
+; |Control|clr_B~24    ; |Control|clr_B~24    ; out              ;
+; |Control|clr_C~25    ; |Control|clr_C~25    ; out              ;
+; |Control|ld_C~13     ; |Control|ld_C~13     ; out              ;
+; |Control|clr_Z~26    ; |Control|clr_Z~26    ; out              ;
+; |Control|ld_Z~0      ; |Control|ld_Z~0      ; out              ;
+; |Control|B_MUX~11    ; |Control|B_MUX~11    ; out              ;
+; |Control|REG_Mux~9   ; |Control|REG_Mux~9   ; out              ;
+; |Control|ALU_op~62   ; |Control|ALU_op~62   ; out              ;
+; |Control|ALU_op~63   ; |Control|ALU_op~63   ; out              ;
+; |Control|ALU_op~64   ; |Control|ALU_op~64   ; out              ;
+; |Control|IM_MUX1~12  ; |Control|IM_MUX1~12  ; out              ;
+; |Control|IM_MUX2~37  ; |Control|IM_MUX2~37  ; out              ;
+; |Control|IM_MUX2~38  ; |Control|IM_MUX2~38  ; out              ;
+; |Control|process_2~1 ; |Control|process_2~1 ; out0             ;
+; |Control|process_2~2 ; |Control|process_2~2 ; out0             ;
+; |Control|en~0        ; |Control|en~0        ; out              ;
+; |Control|wen~0       ; |Control|wen~0       ; out              ;
+; |Control|en~1        ; |Control|en~1        ; out              ;
+; |Control|wen~1       ; |Control|wen~1       ; out              ;
+; |Control|enable      ; |Control|enable      ; out              ;
+; |Control|statusC     ; |Control|statusC     ; out              ;
+; |Control|statusZ     ; |Control|statusZ     ; out              ;
+; |Control|INST[24]    ; |Control|INST[24]    ; out              ;
+; |Control|INST[25]    ; |Control|INST[25]    ; out              ;
+; |Control|INST[26]    ; |Control|INST[26]    ; out              ;
+; |Control|INST[27]    ; |Control|INST[27]    ; out              ;
+; |Control|INST[28]    ; |Control|INST[28]    ; out              ;
+; |Control|INST[29]    ; |Control|INST[29]    ; out              ;
+; |Control|INST[31]    ; |Control|INST[31]    ; out              ;
+; |Control|B_MUX       ; |Control|B_MUX       ; pin_out          ;
+; |Control|IM_MUX1     ; |Control|IM_MUX1     ; pin_out          ;
+; |Control|REG_Mux     ; |Control|REG_Mux     ; pin_out          ;
+; |Control|IM_MUX2[0]  ; |Control|IM_MUX2[0]  ; pin_out          ;
+; |Control|IM_MUX2[1]  ; |Control|IM_MUX2[1]  ; pin_out          ;
+; |Control|DATA_Mux[0] ; |Control|DATA_Mux[0] ; pin_out          ;
+; |Control|DATA_Mux[1] ; |Control|DATA_Mux[1] ; pin_out          ;
+; |Control|ALU_op[0]   ; |Control|ALU_op[0]   ; pin_out          ;
+; |Control|ALU_op[1]   ; |Control|ALU_op[1]   ; pin_out          ;
+; |Control|ALU_op[2]   ; |Control|ALU_op[2]   ; pin_out          ;
+; |Control|clr_IR      ; |Control|clr_IR      ; pin_out          ;
+; |Control|clr_A       ; |Control|clr_A       ; pin_out          ;
+; |Control|clr_B       ; |Control|clr_B       ; pin_out          ;
+; |Control|clr_C       ; |Control|clr_C       ; pin_out          ;
+; |Control|clr_Z       ; |Control|clr_Z       ; pin_out          ;
+; |Control|ld_B        ; |Control|ld_B        ; pin_out          ;
+; |Control|ld_C        ; |Control|ld_C        ; pin_out          ;
+; |Control|ld_Z        ; |Control|ld_Z        ; pin_out          ;
+; |Control|wen         ; |Control|wen         ; pin_out          ;
+; |Control|en          ; |Control|en          ; pin_out          ;
+; |Control|Equal0~0    ; |Control|Equal0~0    ; out0             ;
+; |Control|Equal1~0    ; |Control|Equal1~0    ; out0             ;
+; |Control|Equal2~0    ; |Control|Equal2~0    ; out0             ;
+; |Control|Equal3~0    ; |Control|Equal3~0    ; out0             ;
+; |Control|Equal4~0    ; |Control|Equal4~0    ; out0             ;
+; |Control|Equal5~0    ; |Control|Equal5~0    ; out0             ;
+; |Control|Equal6~0    ; |Control|Equal6~0    ; out0             ;
+; |Control|Equal8~0    ; |Control|Equal8~0    ; out0             ;
+; |Control|Equal10~0   ; |Control|Equal10~0   ; out0             ;
+; |Control|Equal11~0   ; |Control|Equal11~0   ; out0             ;
+; |Control|Equal12~0   ; |Control|Equal12~0   ; out0             ;
+; |Control|Equal13~0   ; |Control|Equal13~0   ; out0             ;
+; |Control|Equal14~0   ; |Control|Equal14~0   ; out0             ;
+; |Control|Equal15~0   ; |Control|Equal15~0   ; out0             ;
+; |Control|Equal16~0   ; |Control|Equal16~0   ; out0             ;
+; |Control|Equal17~0   ; |Control|Equal17~0   ; out0             ;
+; |Control|Equal18~0   ; |Control|Equal18~0   ; out0             ;
+; |Control|Equal19~0   ; |Control|Equal19~0   ; out0             ;
+; |Control|Equal20~0   ; |Control|Equal20~0   ; out0             ;
+; |Control|Equal21~0   ; |Control|Equal21~0   ; out0             ;
+; |Control|Equal22~0   ; |Control|Equal22~0   ; out0             ;
+; |Control|Equal23~0   ; |Control|Equal23~0   ; out0             ;
+; |Control|Equal24~0   ; |Control|Equal24~0   ; out0             ;
+; |Control|Equal25~0   ; |Control|Equal25~0   ; out0             ;
++----------------------+----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Mar 19 09:40:14 2026
+Info: Command: quartus_sim --simulation_results_format=VWF lab5 -c lab5_qsim
+Info (324025): Using vector source file "Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab5_2/tb/LUI.vwf"
+Warning (328012): Can't find signal in vector source file for input pin "|Control|statusC"
+Warning (328012): Can't find signal in vector source file for input pin "|Control|statusZ"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      21.17 %
+Info (328052): Number of transitions in simulation is 720
+Info (324045): Vector file lab5_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 215 megabytes
+    Info: Processing ended: Thu Mar 19 09:40:14 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
