@@ -1,5 +1,5 @@
 Flow report for lab4b
-Thu Mar 12 07:33:39 2026
+Thu Mar 12 09:14:54 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 12 07:33:39 2026           ;
+; Flow Status                        ; Successful - Thu Mar 12 09:14:54 2026           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; lab4b                                           ;
 ; Top-level Entity Name              ; data_path                                       ;
@@ -95,7 +95,11 @@ applicable agreement for further details.
 ; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 393 MB              ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 221 MB              ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 221 MB              ; 00:00:00                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 217 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 221 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 221 MB              ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 221 MB              ; 00:00:00                           ;
+; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:00                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,6 +111,10 @@ applicable agreement for further details.
 ; Analysis & Synthesis ; hahnchen-manjaro-2 ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; hahnchen-manjaro-2 ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer   ; hahnchen-manjaro-2 ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; hahnchen-manjaro-2 ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; hahnchen-manjaro-2 ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; hahnchen-manjaro-2 ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer   ; hahnchen-manjaro-2 ; Windows 7 ; 6.2        ; x86_64         ;
 +----------------------+--------------------+-----------+------------+----------------+
 
 
@@ -115,6 +123,10 @@ applicable agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off lab4b -c lab4b
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog lab4b -c lab4b --vector_source=Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab4b_vhdl/LDAI.vwf --testbench_file=./simulation/qsim/lab4b.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog lab4b -c lab4b
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog lab4b -c lab4b --vector_source=Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab4b_vhdl/CLRB.vwf --testbench_file=./simulation/qsim/lab4b.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog lab4b -c lab4b
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog lab4b -c lab4b --vector_source=Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab4b_vhdl/ADDI.vwf --testbench_file=./simulation/qsim/lab4b.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog lab4b -c lab4b
 
 

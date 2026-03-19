@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "03/12/2026 07:33:38"
+// Generated on "03/12/2026 09:14:53"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    data_path
 // 
@@ -3851,16 +3851,22 @@ end
 initial
 begin
 	DATA_IN[30] = 1'b0;
+	DATA_IN[30] = #300000 1'b1;
+	DATA_IN[30] = #200000 1'b0;
 end 
 // DATA_IN[ 29 ]
 initial
 begin
 	DATA_IN[29] = 1'b0;
+	DATA_IN[29] = #300000 1'b1;
+	DATA_IN[29] = #200000 1'b0;
 end 
 // DATA_IN[ 28 ]
 initial
 begin
 	DATA_IN[28] = 1'b0;
+	DATA_IN[28] = #300000 1'b1;
+	DATA_IN[28] = #200000 1'b0;
 end 
 // DATA_IN[ 27 ]
 initial
@@ -3881,6 +3887,8 @@ end
 initial
 begin
 	DATA_IN[24] = 1'b0;
+	DATA_IN[24] = #300000 1'b1;
+	DATA_IN[24] = #200000 1'b0;
 end 
 // DATA_IN[ 23 ]
 initial
@@ -3926,8 +3934,6 @@ end
 initial
 begin
 	DATA_IN[15] = 1'b0;
-	DATA_IN[15] = #100000 1'b1;
-	DATA_IN[15] = #200000 1'b0;
 end 
 // DATA_IN[ 14 ]
 initial
@@ -3938,8 +3944,6 @@ end
 initial
 begin
 	DATA_IN[13] = 1'b0;
-	DATA_IN[13] = #100000 1'b1;
-	DATA_IN[13] = #200000 1'b0;
 end 
 // DATA_IN[ 12 ]
 initial
@@ -3950,8 +3954,6 @@ end
 initial
 begin
 	DATA_IN[11] = 1'b0;
-	DATA_IN[11] = #100000 1'b1;
-	DATA_IN[11] = #200000 1'b0;
 end 
 // DATA_IN[ 10 ]
 initial
@@ -3962,8 +3964,6 @@ end
 initial
 begin
 	DATA_IN[9] = 1'b0;
-	DATA_IN[9] = #100000 1'b1;
-	DATA_IN[9] = #200000 1'b0;
 end 
 // DATA_IN[ 8 ]
 initial
@@ -3974,8 +3974,6 @@ end
 initial
 begin
 	DATA_IN[7] = 1'b0;
-	DATA_IN[7] = #100000 1'b1;
-	DATA_IN[7] = #200000 1'b0;
 end 
 // DATA_IN[ 6 ]
 initial
@@ -3986,8 +3984,6 @@ end
 initial
 begin
 	DATA_IN[5] = 1'b0;
-	DATA_IN[5] = #100000 1'b1;
-	DATA_IN[5] = #200000 1'b0;
 end 
 // DATA_IN[ 4 ]
 initial
@@ -3998,25 +3994,29 @@ end
 initial
 begin
 	DATA_IN[3] = 1'b0;
-	DATA_IN[3] = #100000 1'b1;
+	DATA_IN[3] = #300000 1'b1;
 	DATA_IN[3] = #200000 1'b0;
 end 
 // DATA_IN[ 2 ]
 initial
 begin
 	DATA_IN[2] = 1'b0;
+	DATA_IN[2] = #100000 1'b1;
+	DATA_IN[2] = #200000 1'b0;
 end 
 // DATA_IN[ 1 ]
 initial
 begin
 	DATA_IN[1] = 1'b0;
 	DATA_IN[1] = #100000 1'b1;
-	DATA_IN[1] = #200000 1'b0;
+	DATA_IN[1] = #400000 1'b0;
 end 
 // DATA_IN[ 0 ]
 initial
 begin
 	DATA_IN[0] = 1'b0;
+	DATA_IN[0] = #300000 1'b1;
+	DATA_IN[0] = #200000 1'b0;
 end 
 
 // CLR_IR
@@ -4030,6 +4030,8 @@ end
 initial
 begin
 	LD_IR = 1'b0;
+	LD_IR = #100000 1'b1;
+	LD_IR = #100000 1'b0;
 	LD_IR = #100000 1'b1;
 	LD_IR = #100000 1'b0;
 end 
@@ -4064,6 +4066,8 @@ begin
 	LD_A = 1'b0;
 	LD_A = #200000 1'b1;
 	LD_A = #100000 1'b0;
+	LD_A = #100000 1'b1;
+	LD_A = #100000 1'b0;
 end 
 
 // CLR_B
@@ -4088,6 +4092,8 @@ end
 initial
 begin
 	LD_C = 1'b0;
+	LD_C = #400000 1'b1;
+	LD_C = #100000 1'b0;
 end 
 
 // CLR_Z
@@ -4100,6 +4106,8 @@ end
 initial
 begin
 	LD_Z = 1'b0;
+	LD_Z = #400000 1'b1;
+	LD_Z = #100000 1'b0;
 end 
 // ALU_OP[ 2 ]
 initial
@@ -4110,6 +4118,8 @@ end
 initial
 begin
 	ALU_OP[1] = 1'b0;
+	ALU_OP[1] = #400000 1'b1;
+	ALU_OP[1] = #100000 1'b0;
 end 
 // ALU_OP[ 0 ]
 initial
@@ -4152,6 +4162,8 @@ end
 initial
 begin
 	DATA_MUX[1] = 1'b0;
+	DATA_MUX[1] = #400000 1'b1;
+	DATA_MUX[1] = #100000 1'b0;
 end 
 // DATA_MUX[ 0 ]
 initial
@@ -4173,6 +4185,8 @@ end
 initial
 begin
 	IM_MUX2[0] = 1'b0;
+	IM_MUX2[0] = #400000 1'b1;
+	IM_MUX2[0] = #100000 1'b0;
 end 
 
 data_path_vlg_sample_tst tb_sample (

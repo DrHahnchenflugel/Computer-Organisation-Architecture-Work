@@ -47,6 +47,34 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VECTOR_WAVEFORM_FILE INCA.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE SUB.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE LDB.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE STB.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE STA.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ROR.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ROL.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ORI.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE LUI.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE LDA.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE JMP.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE DECA.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CLRB.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE CLRA.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ANDI.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ADDI.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ADD.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE LDBI.vwf
 set_global_assignment -name VHDL_FILE data_mem.vhd
 set_global_assignment -name VHDL_FILE alu.vhd
 set_global_assignment -name VHDL_FILE pc.vhd
@@ -58,13 +86,6 @@ set_global_assignment -name VHDL_FILE RED.vhd
 set_global_assignment -name VHDL_FILE mux4to1.vhd
 set_global_assignment -name VHDL_FILE data_path.vhd
 set_global_assignment -name VHDL_FILE mux2to1.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE LDAI.vwf
-set_global_assignment -name SIMULATION_MODE FUNCTIONAL
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab4b_vhdl/LDAI.vwf"
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "Z:/home/drhahnchenflugel/Documents/GitHub/Computer-Organisation-Architecture-Work/lab4b_vhdl/ADD.vwf"
