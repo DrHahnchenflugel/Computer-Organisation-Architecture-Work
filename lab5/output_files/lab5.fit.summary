@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Mar 19 05:49:27 2026
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : lab5
+Top-level Entity Name : Control
+Family : Cyclone IV E
+Device : EP4CE6E22C7
+Timing Models : Final
+Total logic elements : 110 / 6,272 ( 2 % )
+    Total combinational functions : 110 / 6,272 ( 2 % )
+    Dedicated logic registers : 3 / 6,272 ( < 1 % )
+Total registers : 3
+Total pins : 65 / 92 ( 71 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
