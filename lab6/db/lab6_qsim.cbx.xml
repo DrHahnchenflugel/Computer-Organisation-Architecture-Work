@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="lab6_qsim">
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu_test_sim|cpu1:main_processor|data_path:dat|data_mem:Data_Mem0|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_qsi1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu_test_sim|system_memory:main_memory|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_n2d1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

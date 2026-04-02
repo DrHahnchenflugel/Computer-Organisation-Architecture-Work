@@ -1,0 +1,46 @@
+copy files to 'tb/system_memory.mif'
+
+LDAI, STA, CLRA, LDA
+system_memory1.mif
+
+LDBI, STB, CLRB, LDB
+system_memory2.mif
+
+LUI
+system_memory3.mif
+
+JMP
+system_memory4.mif
+
+ANDI
+system_memory5.mif
+
+ADDI
+system_memory6.mif
+
+ORI
+system_memory7.mif
+
+ADD
+system_memory8.mif
+
+SUB
+system_memory9.mif
+
+DECA
+system_memory10.mif
+
+INCA
+system_memory11.mif
+
+ROL
+system_memory12.mif
+
+ROR
+system_memory13.mif
+
+BEQ
+system_memory14.mif
+
+BNE
+system_memory15.mif
