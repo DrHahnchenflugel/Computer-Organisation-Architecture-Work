@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Apr  1 23:09:34 2026
-Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Fitter Status : Successful - Wed Apr 01 23:15:02 2026
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : lab6
 Top-level Entity Name : reset_circuit
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 7 / 114,480 ( < 1 % )
+Total logic elements : 6 / 114,480 ( < 1 % )
     Total combinational functions : 6 / 114,480 ( < 1 % )
     Dedicated logic registers : 6 / 114,480 ( < 1 % )
 Total registers : 6

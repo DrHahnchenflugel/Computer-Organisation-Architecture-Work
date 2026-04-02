@@ -1,23 +1,22 @@
--- Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+-- Copyright (C) 1991-2013 Altera Corporation
 -- Your use of Altera Corporation's design tools, logic functions 
 -- and other software and tools, and its AMPP partner logic 
 -- functions, and any output files from any of the foregoing 
 -- (including device programming or simulation files), and any 
 -- associated documentation or information are expressly subject 
 -- to the terms and conditions of the Altera Program License 
--- Subscription Agreement, the Altera Quartus Prime License Agreement,
--- the Altera MegaCore Function License Agreement, or other 
--- applicable license agreement, including, without limitation, 
--- that your use is for the sole purpose of programming logic 
--- devices manufactured by Altera and sold by Altera or its 
--- authorized distributors.  Please refer to the applicable 
--- agreement for further details.
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
 
 -- VENDOR "Altera"
--- PROGRAM "Quartus Prime"
--- VERSION "Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition"
+-- PROGRAM "Quartus II 64-Bit"
+-- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "04/01/2026 23:09:47"
+-- DATE "04/01/2026 23:15:10"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -44,9 +43,9 @@ ENTITY 	reset_circuit IS
 END reset_circuit;
 
 -- Design Ports Information
--- Enable_PD	=>  Location: PIN_Y3,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Clr_PC	=>  Location: PIN_AC2,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- Reset	=>  Location: PIN_U5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Enable_PD	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Clr_PC	=>  Location: PIN_H7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- Reset	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- Clk	=>  Location: PIN_J1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
@@ -65,6 +64,8 @@ SIGNAL ww_Clk : std_logic;
 SIGNAL ww_Enable_PD : std_logic;
 SIGNAL ww_Clr_PC : std_logic;
 SIGNAL \Clk~inputclkctrl_INCLK_bus\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \present_clk.clk2~q\ : std_logic;
+SIGNAL \present_clk~8_combout\ : std_logic;
 SIGNAL \Enable_PD~output_o\ : std_logic;
 SIGNAL \Clr_PC~output_o\ : std_logic;
 SIGNAL \Clk~input_o\ : std_logic;
@@ -72,11 +73,9 @@ SIGNAL \Clk~inputclkctrl_outclk\ : std_logic;
 SIGNAL \Reset~input_o\ : std_logic;
 SIGNAL \present_clk.clk0~0_combout\ : std_logic;
 SIGNAL \present_clk.clk0~q\ : std_logic;
+SIGNAL \present_clk~6_combout\ : std_logic;
 SIGNAL \present_clk~9_combout\ : std_logic;
 SIGNAL \present_clk.clk1~q\ : std_logic;
-SIGNAL \present_clk~8_combout\ : std_logic;
-SIGNAL \present_clk.clk2~q\ : std_logic;
-SIGNAL \present_clk~6_combout\ : std_logic;
 SIGNAL \present_clk~7_combout\ : std_logic;
 SIGNAL \present_clk.clk3~q\ : std_logic;
 SIGNAL \Enable_PD~0_combout\ : std_logic;
@@ -97,7 +96,37 @@ ww_devpor <= devpor;
 \Clk~inputclkctrl_INCLK_bus\ <= (vcc & vcc & vcc & \Clk~input_o\);
 \ALT_INV_Enable_PD~reg0_q\ <= NOT \Enable_PD~reg0_q\;
 
--- Location: IOOBUF_X0_Y24_N16
+-- Location: FF_X1_Y68_N13
+\present_clk.clk2\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \Clk~inputclkctrl_outclk\,
+	d => \present_clk~8_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \present_clk.clk2~q\);
+
+-- Location: LCCOMB_X1_Y68_N12
+\present_clk~8\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \present_clk~8_combout\ = (\present_clk.clk0~q\ & (!\Reset~input_o\ & \present_clk.clk1~q\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000110000000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => \present_clk.clk0~q\,
+	datac => \Reset~input_o\,
+	datad => \present_clk.clk1~q\,
+	combout => \present_clk~8_combout\);
+
+-- Location: IOOBUF_X0_Y68_N2
 \Enable_PD~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -109,7 +138,7 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => \Enable_PD~output_o\);
 
--- Location: IOOBUF_X0_Y24_N23
+-- Location: IOOBUF_X0_Y68_N16
 \Clr_PC~output\ : cycloneive_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -145,7 +174,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	outclk => \Clk~inputclkctrl_outclk\);
 
--- Location: IOIBUF_X0_Y24_N1
+-- Location: IOIBUF_X0_Y68_N8
 \Reset~input\ : cycloneive_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -156,7 +185,7 @@ PORT MAP (
 	i => ww_Reset,
 	o => \Reset~input_o\);
 
--- Location: LCCOMB_X1_Y24_N26
+-- Location: LCCOMB_X1_Y68_N0
 \present_clk.clk0~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \present_clk.clk0~0_combout\ = !\Reset~input_o\
@@ -170,7 +199,7 @@ PORT MAP (
 	datac => \Reset~input_o\,
 	combout => \present_clk.clk0~0_combout\);
 
--- Location: FF_X1_Y24_N27
+-- Location: FF_X1_Y68_N1
 \present_clk.clk0\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -184,22 +213,37 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \present_clk.clk0~q\);
 
--- Location: LCCOMB_X1_Y24_N16
-\present_clk~9\ : cycloneive_lcell_comb
+-- Location: LCCOMB_X1_Y68_N16
+\present_clk~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \present_clk~9_combout\ = (!\present_clk.clk0~q\ & !\Reset~input_o\)
+-- \present_clk~6_combout\ = (\Reset~input_o\) # (!\present_clk.clk0~q\)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000010100000101",
+	lut_mask => "1111000011111111",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \present_clk.clk0~q\,
 	datac => \Reset~input_o\,
+	datad => \present_clk.clk0~q\,
+	combout => \present_clk~6_combout\);
+
+-- Location: LCCOMB_X1_Y68_N2
+\present_clk~9\ : cycloneive_lcell_comb
+-- Equation(s):
+-- \present_clk~9_combout\ = (!\Reset~input_o\ & !\present_clk.clk0~q\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000000001111",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datac => \Reset~input_o\,
+	datad => \present_clk.clk0~q\,
 	combout => \present_clk~9_combout\);
 
--- Location: FF_X1_Y24_N17
+-- Location: FF_X1_Y68_N3
 \present_clk.clk1\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -213,69 +257,24 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \present_clk.clk1~q\);
 
--- Location: LCCOMB_X1_Y24_N8
-\present_clk~8\ : cycloneive_lcell_comb
--- Equation(s):
--- \present_clk~8_combout\ = (\present_clk.clk0~q\ & (!\Reset~input_o\ & \present_clk.clk1~q\))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000101000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \present_clk.clk0~q\,
-	datac => \Reset~input_o\,
-	datad => \present_clk.clk1~q\,
-	combout => \present_clk~8_combout\);
-
--- Location: FF_X1_Y24_N9
-\present_clk.clk2\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \Clk~inputclkctrl_outclk\,
-	d => \present_clk~8_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \present_clk.clk2~q\);
-
--- Location: LCCOMB_X1_Y24_N18
-\present_clk~6\ : cycloneive_lcell_comb
--- Equation(s):
--- \present_clk~6_combout\ = (\present_clk.clk0~q\ & (!\Reset~input_o\ & ((\present_clk.clk2~q\) # (\present_clk.clk3~q\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0010001000100000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	dataa => \present_clk.clk0~q\,
-	datab => \Reset~input_o\,
-	datac => \present_clk.clk2~q\,
-	datad => \present_clk.clk3~q\,
-	combout => \present_clk~6_combout\);
-
--- Location: LCCOMB_X1_Y24_N28
+-- Location: LCCOMB_X1_Y68_N18
 \present_clk~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \present_clk~7_combout\ = (!\present_clk.clk1~q\ & \present_clk~6_combout\)
+-- \present_clk~7_combout\ = (!\present_clk.clk1~q\ & (!\present_clk~6_combout\ & ((\present_clk.clk2~q\) # (\present_clk.clk3~q\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0011001100000000",
+	lut_mask => "0000000000110010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => \present_clk.clk2~q\,
 	datab => \present_clk.clk1~q\,
+	datac => \present_clk.clk3~q\,
 	datad => \present_clk~6_combout\,
 	combout => \present_clk~7_combout\);
 
--- Location: FF_X1_Y24_N29
+-- Location: FF_X1_Y68_N19
 \present_clk.clk3\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -289,7 +288,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => \present_clk.clk3~q\);
 
--- Location: LCCOMB_X1_Y24_N20
+-- Location: LCCOMB_X1_Y68_N14
 \Enable_PD~0\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Enable_PD~0_combout\ = (\Reset~input_o\) # (\present_clk.clk3~q\)
@@ -304,7 +303,7 @@ PORT MAP (
 	datad => \present_clk.clk3~q\,
 	combout => \Enable_PD~0_combout\);
 
--- Location: FF_X1_Y24_N21
+-- Location: FF_X1_Y68_N17
 \Enable_PD~reg0\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -313,14 +312,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Clk~inputclkctrl_outclk\,
-	asdata => \Reset~input_o\,
-	sload => VCC,
+	d => \present_clk~6_combout\,
 	ena => \Enable_PD~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Enable_PD~reg0_q\);
 
--- Location: FF_X1_Y24_N15
+-- Location: FF_X1_Y68_N15
 \Clr_PC~reg0\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
