@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Apr  1 23:09:22 2026
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : lab6
+Top-level Entity Name : reset_circuit
+Family : Cyclone IV E
+Total logic elements : 8
+    Total combinational functions : 6
+    Dedicated logic registers : 6
+Total registers : 6
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

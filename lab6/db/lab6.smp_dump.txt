@@ -1,0 +1,7 @@
+
+State Machine - |reset_circuit|present_clk
+Name present_clk.clk3 present_clk.clk2 present_clk.clk1 present_clk.clk0 
+present_clk.clk0 0 0 0 0 
+present_clk.clk1 0 0 1 1 
+present_clk.clk2 0 1 0 1 
+present_clk.clk3 1 0 0 1 

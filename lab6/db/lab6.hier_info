@@ -1,0 +1,14 @@
+|reset_circuit
+Reset => Clr_PC.OUTPUTSELECT
+Reset => Enable_PD.OUTPUTSELECT
+Reset => present_clk.OUTPUTSELECT
+Reset => present_clk.OUTPUTSELECT
+Reset => present_clk.OUTPUTSELECT
+Reset => present_clk.OUTPUTSELECT
+Clk => Enable_PD~reg0.CLK
+Clk => Clr_PC~reg0.CLK
+Clk => present_clk~1.DATAIN
+Enable_PD <= Enable_PD~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Clr_PC <= Clr_PC~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
