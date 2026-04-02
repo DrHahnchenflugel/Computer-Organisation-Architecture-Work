@@ -99,7 +99,7 @@ SIGNAL alu : STD_LOGIC_VECTOR(2 DOWNTO 0);
 SIGNAL dp_mux2, dp_muxData : STD_LOGIC_VECTOR(1 DOWNTO 0);
 
 BEGIN
-dat : Data_Path
+dat : data_Path
 PORT MAP(
 Clk => clk,
 mClk => mem_clk,

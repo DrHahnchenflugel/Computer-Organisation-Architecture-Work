@@ -16,16 +16,16 @@ ENTITY data_path IS
 			CLR_B, LD_B	  : IN STD_LOGIC;
 			CLR_C, LD_C	  : IN STD_LOGIC;
 			CLR_Z, LD_Z	  : IN STD_LOGIC;
-			CLR_PC, LD_PC : IN STD_LOGIC;
-			CLR_IR, LD_IR : IN STD_LOGIC;
+			ClrPC, LD_PC : IN STD_LOGIC;
+			ClrIR, LD_IR : IN STD_LOGIC;
 			
 			-- Register Outputs
 			OUT_A		: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 			OUT_B		: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 			OUT_C		: OUT STD_LOGIC;
 			OUT_Z		: OUT STD_LOGIC;
-			OUT_PC	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-			OUT_IR	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+			Out_PC	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+			Out_IR	: OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 			
 			-- Special Inputs to PC
 			INC_PC	: IN STD_LOGIC;
@@ -134,7 +134,7 @@ ARCHITECTURE Behaviour OF data_path IS
 	-- Signal Instantiations
 	SIGNAL IR_OUT				: STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL data_bus_s			: STD_LOGIC_VECTOR(31 DOWNTO 0);
-	SIGNAL LZE_out_PC			: STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL LZE_Out_PC			: STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL LZE_OUT_A_Mux		: STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL LZE_OUT_B_Mux		: STD_LOGIC_VECTOR(31 DOWNTO 0);
 	SIGNAL RED_out_Data_Mem : UNSIGNED(7 DOWNTO 0);
@@ -152,27 +152,27 @@ ARCHITECTURE Behaviour OF data_path IS
 	SIGNAL zero_flag			: STD_LOGIC;
 	SIGNAL carry_flag			: STD_LOGIC;
 	SIGNAL temp					: STD_LOGIC_VECTOR(30 DOWNTO 0) := (others => '0');
-	SIGNAL out_pc_sig			: STD_LOGIC_VECTOR(31 DOWNTO 0);
+	SIGNAL Out_PC_sig			: STD_LOGIC_VECTOR(31 DOWNTO 0);
 BEGIN
 	IR : 	register32 port map(
 			data_bus_s,
 			Ld_IR,
-			Clr_IR,
+			ClrIR,
 			Clk,
 			IR_OUT);
 	
 	LZE_PC : LZE port map(
 		IR_OUT,
-		LZE_out_PC);
+		LZE_Out_PC);
 		
 	PC0	: pc port map (
-		CLR_PC,
+		ClrPC,
 		Clk,
 		ld_PC,
 		INC_PC,
-		LZE_out_PC,
+		LZE_Out_PC,
 		--ADDR_OUT
-		out_pc_sig);
+		Out_PC_sig);
 	
 	LZE_A_Mux : LZE port map(
 		IR_OUT,
@@ -259,9 +259,9 @@ BEGIN
 	OUT_B <= reg_B_out;
 	OUT_C <= carry_flag;
 	OUT_Z <= zero_flag;
-	OUT_IR <= IR_OUT;
-	ADDR_OUT <= out_pc_sig;
-	OUT_PC <= out_pc_sig;
+	Out_IR <= IR_OUT;
+	ADDR_OUT <= Out_PC_sig;
+	Out_PC <= Out_PC_sig;
 	
 	
 	MEM_ADDR <= RED_out_Data_Mem;

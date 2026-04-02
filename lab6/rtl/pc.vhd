@@ -21,7 +21,7 @@ BEGIN
 			q <= (others => '0') ; 
 		ELSIF clk'EVENT AND clk = '1' THEN -- update Q on CLK rising edge
 			IF inc = '1' THEN -- on INC signal, increment Q by 4
-				q <= q+4 ;
+				q <= q+1 ; -- WAS +4, changed per tutorial 6
 			ELSIF ld = '1' THEN -- on LOAD signal, load D into Q
 				q <= d ; 
 			END IF;				-- if no INC or LOAD, do nothing on rising edge
