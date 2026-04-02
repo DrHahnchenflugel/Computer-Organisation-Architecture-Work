@@ -33,6 +33,32 @@ BEGIN
 	------- OPERATION DECODER -------
 	PROCESS (present_state, INST, statusC, statusZ, enable, Instruction_sig, Instruction_sig2)
 	BEGIN
+		-- Default assignments to prevent stale control values / latch behavior
+		A_MUX    <= '0';
+		B_MUX    <= '0';
+		IM_MUX1  <= '0';
+		REG_MUX  <= '0';
+		IM_MUX2  <= "00";
+		DATA_MUX <= "00";
+		ALU_op   <= "000";
+
+		inc_PC <= '0';
+		ld_PC  <= '0';
+		clr_IR <= '0';
+		ld_IR  <= '0';
+
+		clr_A <= '0';
+		clr_B <= '0';
+		clr_C <= '0';
+		clr_Z <= '0';
+
+		ld_A <= '0';
+		ld_B <= '0';
+		ld_C <= '0';
+		ld_Z <= '0';
+
+		en  <= '0';
+		wen <= '0';
 		if enable = '1' then
 			if present_state = state_0 then
 				DATA_Mux <= "00";	--Fetch address of next instruction
@@ -271,7 +297,7 @@ BEGIN
 					ld_Z <= '0';
 					A_Mux <= '1';
 					
-				elsif Instruction_sig = "0000" then --LDBI
+				elsif Instruction_sig = "0001" then --LDBI
 					clr_IR <= '0';
 					ld_IR <= '0';
 					ld_PC <= '0';
