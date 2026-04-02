@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for lab6
-Thu Apr 02 00:43:18 2026
+Thu Apr 02 09:12:26 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -6245,9 +6245,10 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Apr 02 00:43:16 2026
+    Info: Processing started: Thu Apr 02 09:12:24 2026
 Info: Command: quartus_sta lab6 -c lab6
 Info: qsta_default_script.tcl version: #1
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
@@ -6267,10 +6268,10 @@ Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for no
 Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
 Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
-Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
 Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
+Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_PRESERVE_HIGH_SPEED_TILES for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_IGNORE_SOURCE_FILE_CHANGES for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_ALWAYS_USE_QXP_NETLIST for node ""
@@ -6290,7 +6291,6 @@ Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_INPUTS for no
 Warning (136002): Ignored duplicate of assignment MERGE_EQUIVALENT_BIDIRS for node ""
 Warning (136002): Ignored duplicate of assignment ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_EXTRACT_HARD_BLOCK_NODES for node ""
-Warning (136002): Ignored duplicate of assignment PARTITION_SOURCE for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_BACK_ANNOTATION for node ""
 Warning (136002): Ignored duplicate of assignment PARTITION_COLOR for node ""
 Warning (136002): Ignored duplicate of assignment HIERARCHY_BLACKBOX_FILE for node "|"
@@ -6391,8 +6391,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 440 megabytes
-    Info: Processing ended: Thu Apr 02 00:43:18 2026
+    Info: Peak virtual memory: 443 megabytes
+    Info: Processing ended: Thu Apr 02 09:12:26 2026
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
